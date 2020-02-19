@@ -61,7 +61,8 @@ a {
 }
 
 body {
-    margin: 0;
+    margin: 0 auto;
+    width: 1020px;
     font-family: 'Lato Regular', sans-serif;
     font-size: 16px;
     background-color: #fefefe;     
@@ -73,16 +74,19 @@ body {
 }
 
 .header {
-    padding: 35px 30px;
+    padding: 28px 28px;
     background-color: #2d303a;
     border-bottom: solid 6px #323746;
 }
 
 .header__logo {
-    font-size: 25px;
-    font-weight: 700;
-    line-height: 1;
+    margin-top: 5px;
+}
+
+.header__logo-link {
     
+    font-weight: 500;
+    line-height: 1;
     color: #fff;
     text-transform: uppercase;
 }
@@ -98,6 +102,7 @@ body {
 }
 
 .nav__block {
+    margin-top: 10px;
     display: flex;
     font-size: 12px;
     font-weight: 700;
@@ -108,8 +113,12 @@ body {
 
 
 .nav__item {
-    margin-right: 30px;
+    margin-left: 30px;
     position: relative;
+    font-weight: 300;
+}
+ .nav .nav__item::first-child {
+    margin-left: 0;
 }
 
 .nav__item-link:hover {
@@ -120,9 +129,6 @@ body {
     color: #f06c64;
 }
 
-.nav-item:last-child {
-    margin-right: 0;
-}
 
 .nav__item:before {
     content: "";
@@ -132,7 +138,7 @@ body {
     border-radius: 50%;
     position: absolute;
     top: 50%;
-    right: -16px;
+    right: -18px;
     transform: translateY(-50%);
   }
   .nav__item:last-child::before {
