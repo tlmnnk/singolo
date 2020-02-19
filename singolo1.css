@@ -1,52 +1,3 @@
-@font-face {
-    font-family: 'Lato Black';
-    src: url('assets/Lato-Black.eot');
-    src: url('assets/Lato-Black.eot?#iefix') format('embedded-opentype'),
-    url('assets/Lato-Black.woff') format('woff'),
-    url('assets/Lato-Black.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-  }
-  
-  @font-face {
-    font-family: 'Lato Bold';
-    src: url('assets/Lato-Bold.eot');
-    src: url('assets/Lato-Bold.eot?#iefix') format('embedded-opentype'),
-    url('assets/Lato-Bold.woff') format('woff'),
-    url('assets/Lato-Bold.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-  }
-  
-  @font-face {
-    font-family: 'Lato Regular';
-    src: url('assets/Lato-Regular.eot');
-    src: url('assets/Lato-Regular.eot?#iefix') format('embedded-opentype'),
-    url('assets/Lato-Regular.woff') format('woff'),
-    url('assets/Lato-Regular.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-  }
-  
-  @font-face {
-    font-family: 'Lato Light';
-    src: url('assets/Lato-Light.eot');
-    src: url('assets/Lato-Light.eot?#iefix') format('embedded-opentype'),
-    url('assets/Lato-Light.woff') format('woff'),
-    url('assets/Lato-Light.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-  }
-  
-  @font-face {
-    font-family: 'Lato Thin';
-    src: url('assets/Lato-Thin.eot');
-    src: url('assets/Lato-Thin.eot?#iefix') format('embedded-opentype'),
-    url('assets/Lato-Thin.woff') format('woff'),
-    url('assets/Lato-Thin.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-  }
 
 *,
 *:before, *:after {
@@ -59,12 +10,16 @@
 a {
     text-decoration: none;
 }
+html {
+    font-size: 10px;
+}
 
 body {
     margin: 0 auto;
     width: 1020px;
-    font-family: 'Lato Regular', sans-serif;
-    font-size: 16px;
+    font-family: 'Lato', sans-serif;
+    font-size: 1.6rem;
+    font-weight: 400;
     background-color: #fefefe;     
 }
 
@@ -74,19 +29,17 @@ body {
 }
 
 .header {
-    padding: 28px 28px;
     background-color: #2d303a;
     border-bottom: solid 6px #323746;
 }
 
 .header__logo {
-    margin-top: 5px;
+    margin-top: 3px;
 }
 
 .header__logo-link {
-    
-    font-weight: 500;
-    line-height: 1;
+    font-size: 2.4rem;
+    font-weight: 700;
     color: #fff;
     text-transform: uppercase;
 }
@@ -96,6 +49,7 @@ body {
   }
 
 .header__block {
+    padding: 27px 0 30px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -104,8 +58,9 @@ body {
 .nav__block {
     margin-top: 10px;
     display: flex;
-    font-size: 12px;
-    font-weight: 700;
+    align-items: center;
+    font-size: 1.2rem;
+    letter-spacing: -0.017rem;
     color: #fff;
     list-style: none;
     text-transform: uppercase;
@@ -115,9 +70,9 @@ body {
 .nav__item {
     margin-left: 30px;
     position: relative;
-    font-weight: 300;
+    font-weight: 400;
 }
- .nav .nav__item::first-child {
+ .nav .nav__block:first-child {
     margin-left: 0;
 }
 
@@ -133,13 +88,13 @@ body {
 .nav__item:before {
     content: "";
     background-color: #434759;
-    width: 3px;
-    height: 3px;
+    width: 2px;
+    height: 2px;
     border-radius: 50%;
     position: absolute;
     top: 50%;
-    right: -18px;
-    transform: translateY(-50%);
+    right: -16px;
+   
   }
   .nav__item:last-child::before {
       width: 0;
