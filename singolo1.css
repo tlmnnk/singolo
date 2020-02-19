@@ -130,6 +130,12 @@ body {
     z-index: -1;
 }
 
+.slider__item-shadow--h {
+    transform: scaleY(-1) rotate(90deg);
+    filter: FlipV;
+
+}
+
 .slider__item-horizontal {
     margin-left: auto;
     margin-right: 219px;
