@@ -105,8 +105,9 @@ body {
 
 .slider {
     padding-top: 53px;
-    padding-bottom: 90px;
+    padding-bottom: 84px;
     background-color: #f06c64;
+    border-bottom: solid 6px #ea676b;
 }
 
 .slider__item {
@@ -128,7 +129,7 @@ body {
     display: block;
     position: absolute;
     top: 0;
-    z-index: -1;
+    z-index: -2;
 }
 
 .slider__item-shadow--h {
@@ -137,14 +138,42 @@ body {
 
 }
 
+.slider__item-wallpaper {  
+    position: absolute;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    z-index: -1;
+}
+
+.slider__item-wallpaper--v {
+    width: 190px;
+    height: 335px;
+    top: 64px;
+    left: 12px;
+    background-image: url(/assets/iphone-wallpaper1.jpg);
+    background-position: top -133px left -12px
+}
+
+.slider__item-wallpaper--h {
+    width: 335px;
+    height: 190px;
+    top: 133px;
+    left: -61px;
+    background-image: url(/assets/iphone-wallpaper2.jpg);
+    background-position: top -116px left -125px;
+    
+}
+
+.slider__item-wallpaper__img {
+    transform: translate(-2.5%, -22%);
+}
+
 .slider__item-horizontal {
     margin-left: auto;
     margin-right: 219px;
     position: relative;
     z-index: 2;
 }
-
-
 
 .slider__item-img--horizontal {
     display: block;
