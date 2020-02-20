@@ -26,6 +26,7 @@ body {
 .container {
     margin: 0 auto;
     max-width: 940px;
+    position: relative;
 }
 
 .header {
@@ -180,3 +181,22 @@ body {
     transform: rotate(90deg);
 }
 
+.slider__arrow {
+    position: absolute;
+    height: 30px;
+    width: 16px;
+    background-repeat: no-repeat;
+    opacity: 0.2;
+    top: 50%
+}
+
+.slider__arrow--left {
+    background-image: url(/assets/prev.png);
+    transform: translate(18%, -2%)
+}
+
+.slider__arrow--right {
+    background-image: url(/assets/prev.png);
+    transform: rotate(180deg) translateY(10%);
+    right: 0;
+}
