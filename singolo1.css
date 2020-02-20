@@ -186,17 +186,21 @@ body {
     height: 30px;
     width: 16px;
     background-repeat: no-repeat;
-    opacity: 0.2;
-    top: 50%
+    opacity: 0.4;
+    top: 50%;
+    cursor: pointer;
 }
 
 .slider__arrow--left {
-    background-image: url(/assets/prev.png);
-    transform: translate(18%, -2%)
+    transform: rotate(180deg) scale(1.7) translateY(29%);
 }
 
-.slider__arrow--right {
-    background-image: url(/assets/prev.png);
-    transform: rotate(180deg) translateY(10%);
+.slider__arrow--right {  
+    transform: scale(1.7) translateY(15%);
     right: 0;
+}
+
+.slider__arrow:hover {
+    opacity: 1;
+    fill: #ebebeb;
 }
