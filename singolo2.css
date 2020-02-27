@@ -1,0 +1,40 @@
+.container {
+  margin: 0 auto;
+  max-width: 940px;
+  position: relative;
+}
+
+*,
+*:before, *:after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: #fff;
+}
+
+a {
+  text-decoration: none;
+}
+
+html {
+  font-size: 10px;
+}
+
+body {
+  margin: 0 auto;
+  width: 940px;
+  font-family: "Lato", sans-serif;
+  font-size: 1.6rem;
+  font-weight: 400;
+  background-color: #fefefe;
+}
+
+.portfolio {
+  background-color: #2d303a;
+}
+
+.about-us {
+  background-color: #f2f2f2;
+}
+
+/*# sourceMappingURL=singolo2.css.map */

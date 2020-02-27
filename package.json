@@ -1,0 +1,21 @@
+{
+  "name": "singolo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "sass": "sass sass/style.scss singolo2.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tlmnnk/singolo.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tlmnnk/singolo/issues"
+  },
+  "homepage": "https://github.com/tlmnnk/singolo#readme"
+}
