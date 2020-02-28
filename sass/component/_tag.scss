@@ -1,0 +1,15 @@
+.tag {
+    margin-right: 5px;
+    padding: 3px 7px;
+    font-size: 1.2rem;
+    line-height: 2.2rem;
+    color: $color-dark-text;
+    font-weight: 400;
+    border-radius: 5px;
+    border: 1px solid $color-dark-title;
+
+    &--selected {
+        color: $color-light-bg;
+        border-color: $color-light-bg;
+    }
+}
