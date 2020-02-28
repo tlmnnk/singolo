@@ -38,7 +38,7 @@ body {
 
 .portfolio {
   padding-top: 60px;
-  padding-bottom: 66px;
+  padding-bottom: 68px;
   background-color: #2d303a;
   border-bottom: 6px solid #323746;
 }
@@ -46,7 +46,7 @@ body {
   margin-top: 12px;
 }
 .portfolio__item {
-  margin-top: 20px;
+  margin-top: 19px;
   margin-right: 20px;
   width: 220px;
   height: 187px;
