@@ -29,6 +29,17 @@ body {
   background-color: #fefefe;
 }
 
+h3 {
+  font-size: 1.8rem;
+  line-height: 1.8rem;
+  color: #666d89;
+  font-weight: 900;
+}
+
+.layout-3-colomn {
+  display: flex;
+  justify-content: space-between;
+}
 .layout-4-colomn {
   display: flex;
   flex-wrap: wrap;
@@ -61,8 +72,11 @@ body {
 }
 
 .about-us {
-  padding-top: 65px;
+  padding-top: 60px;
   background-color: #f2f2f2;
+}
+.about-us__layout {
+  margin-top: 45px;
 }
 
 .title {
@@ -92,6 +106,44 @@ body {
 .tag--selected {
   color: #f2f2f2;
   border-color: #f2f2f2;
+}
+
+.employee__content {
+  width: 300px;
+}
+.employee__name {
+  margin-top: 15px;
+}
+.employee__photo {
+  height: 300px;
+}
+.employee__descr {
+  margin-top: 10px;
+  font-size: 1.2rem;
+  line-height: 2.2rem;
+  color: #767e9e;
+  font-weight: 400;
+}
+.employee__socials {
+  margin-top: 20px;
+}
+
+.social {
+  margin-right: 4px;
+  display: inline-block;
+  position: relative;
+  width: 33px;
+  height: 32px;
+  border: 1px solid #666d89;
+  border-radius: 50%;
+}
+.social__facebook {
+  position: absolute;
+  height: 20px;
+  width: 20px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 /*# sourceMappingURL=singolo2.css.map */

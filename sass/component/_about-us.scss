@@ -1,4 +1,8 @@
 .about-us {
-    padding-top: 65px;
+    padding-top: 60px;
     background-color: $color-light-bg;
+
+    &__layout {
+        margin-top: 45px;
+    }
 }

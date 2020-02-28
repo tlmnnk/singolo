@@ -1,0 +1,14 @@
+.layout {
+
+    &-3-colomn {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &-4-colomn {
+        display: flex;
+        flex-wrap: wrap;
+        max-height: 620px;
+        overflow: hidden;
+    }
+}
