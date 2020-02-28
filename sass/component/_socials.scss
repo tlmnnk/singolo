@@ -7,12 +7,23 @@
     border: 1px solid $color-dark-title;
     border-radius: 50%;
 
-    &__facebook {
+    &::hover {
+        border-color: #b67909;
+
+        .social__icon {
+            fill: #b67909;
+        }
+    }
+
+    &__icon {
+        display: block;
         position: absolute;
-        height: 20px;
-        width: 20px;
+        height: 15px;
+        width: 15px;
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
+        fill: $color-dark-title; // ???????????
+
     }
 }
