@@ -115,6 +115,8 @@ h3 {
 }
 .employee__name {
   margin-top: 15px;
+  max-height: 18px;
+  overflow: hidden;
 }
 .employee__photo {
   height: 300px;
@@ -138,8 +140,13 @@ h3 {
   height: 32px;
   border: 1px solid #666d89;
   border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.2s ease-out;
 }
-.social__icon {
+.social:hover {
+  background-color: #b67909;
+}
+.social__object {
   display: block;
   position: absolute;
   height: 15px;
@@ -147,6 +154,13 @@ h3 {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+.social-path {
+  fill: #666d89;
+}
+
+.social-svg {
+  cursor: pointer;
 }
 
 /*# sourceMappingURL=singolo2.css.map */

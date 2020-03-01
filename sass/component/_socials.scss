@@ -6,24 +6,29 @@
     height: 32px;
     border: 1px solid $color-dark-title;
     border-radius: 50%;
+    cursor: pointer;
+    transition: all .2s ease-out;
 
-    &::hover {
-        border-color: #b67909;
-
-        .social__icon {
-            fill: #b67909;
-        }
+    &:hover {
+        background-color: #b67909;
     }
 
-    &__icon {
+    &__object {
         display: block;
         position: absolute;
         height: 15px;
         width: 15px;
         top: 50%;
         left: 50%;
-        transform: translate(-50%, -50%);
-        fill: $color-dark-title; // ???????????
+        transform: translate(-50%, -50%); 
+    }
 
+    &-path {
+        fill: $color-dark-title;
     }
 }
+
+.social-svg {
+    cursor: pointer;
+}
+
