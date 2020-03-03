@@ -1,0 +1,41 @@
+.contact {
+    max-width: 300px;
+
+    &__title {
+        color: $color-light-text;
+    }
+
+    &__text, &__details, &__details a {
+        margin-top: 15px;
+        display: block;
+        font-size: 1.2rem;
+        line-height: 2.2rem;
+        font-weight: 400;
+        color: $color-light-text;
+    }
+
+    &__text {
+        margin-top: 9px;
+    }
+    &__details {
+        margin-top: 20px;
+    }
+    &__details a {
+        margin-top: 0px;
+    }
+
+    &__geo {
+        @extend %contact-icon;
+        background-image: url('../assets/geo.png');
+    }
+
+    &__tel {
+        @extend %contact-icon;
+        background-image: url('../assets/tel.png');
+    }
+
+    &__email {
+        @extend %contact-icon;
+        background-image: url('../assets/mail.png');
+    }
+}

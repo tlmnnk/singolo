@@ -1,0 +1,15 @@
+.footer {
+    padding: 22px 0 20px;
+    background-color: $color-dark-bg;
+
+    &__copyright {
+        font-size: 1.2rem;
+        line-height: 3rem;
+        font-weight: 400;
+        color: $color-dark-title;
+    }
+
+    &__socials {
+       margin-right: -5px;
+    }
+}

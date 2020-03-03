@@ -1,0 +1,17 @@
+.get-quote {
+    padding: 60px 0 67px;
+    background-color: $color-getQuote-bg;
+    border-bottom: 6px solid $color-getQuote-bottom;
+
+    &__title {
+        color: $color-light-text;
+    }
+
+    &__subtitle {
+        color: $color-light-text;
+    }
+
+    &__contact {
+        margin-top: 45px;
+    }
+}
