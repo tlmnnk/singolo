@@ -151,7 +151,7 @@ body {
     height: 335px;
     top: 64px;
     left: 12px;
-    background-image: url(/assets/iphone-wallpaper1.jpg);
+    background-image: url(assets/iphone-wallpaper1.jpg);
     background-position: top -133px left -12px
 }
 
@@ -160,7 +160,7 @@ body {
     height: 190px;
     top: 133px;
     left: -61px;
-    background-image: url(/assets/iphone-wallpaper2.jpg);
+    background-image: url(assets/iphone-wallpaper2.jpg);
     background-position: top -116px left -125px;
     
 }
