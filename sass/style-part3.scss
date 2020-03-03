@@ -1,10 +1,15 @@
 @import './abstarct/constants';
+@import './abstarct/placeholders';
 
 @import './layout/container';
 
 @import './base/base';
 
-@import './layout/layouts';
+@import './layout/_layouts';
 
+@import './component/title';
 @import './component/get-quote';
+@import './component/form';
+@import './component/contact';
 @import './component/footer';
+@import './component/socials';

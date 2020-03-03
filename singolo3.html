@@ -14,15 +14,13 @@
             <h2 class="title get-quote__title">Get a Quote</h2>
             <p class="title__subtitle get-quote__subtitle">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
             <div class="layout-2-column get-quote__contact">
-                <form>
-                    <label for="name">Name</label>
-                    <input class="form__name" id="name" type="name" required>
-                    <label for="email"></label>
-                    <input class="form__email" id="email" type="email" required>
-                    <label for="subject">Subject</label>
-                    <input class="form__subject" id="subject" type="text">
-                    <label for="area"> Describe your project in detail...</label>
-                    <textarea class="form__area" name="area" id="area"></textarea>
+                <form class="form" method="POST" action="/">
+                    <input class="form__name" id="name" type="name" placeholder="Name" required>
+                    <input class="form__email" id="email" type="email" placeholder="Email" required>
+                    <input class="form__subject" id="subject" type="text" placeholder="Subject">
+                    <label for="area"> </label>
+                    <textarea class="form__area" name="area" id="area" placeholder="Describe your project in detail..."></textarea>
+                    <input class="form__submit" type="submit" value="Submit">
                 </form>
                 <div class="contact">
                     <h3 class="contact__title">Contact Information</h3>
