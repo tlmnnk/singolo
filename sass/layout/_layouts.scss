@@ -1,5 +1,10 @@
 .layout {
 
+    &-2-colomn {
+        display: flex;
+        justify-content: space-between;
+    }
+
     &-3-colomn {
         display: flex;
         justify-content: space-between;
