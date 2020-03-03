@@ -162,6 +162,20 @@ h3 {
   background-image: url("../assets/mail.png");
 }
 
+.footer {
+  padding: 22px 0 20px;
+  background-color: #2d303a;
+}
+.footer__copyright {
+  font-size: 1.2rem;
+  line-height: 3rem;
+  font-weight: 400;
+  color: #666d89;
+}
+.footer__socials {
+  margin-right: -5px;
+}
+
 .social {
   margin-right: 4px;
   display: inline-block;
