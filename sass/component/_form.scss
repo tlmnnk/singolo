@@ -29,6 +29,10 @@
             font-weight: 400;
         }
 
+        &:invalid:not(:focus):not(:placeholder-shown) {
+            background: rgb(255, 126, 147);
+        }
+
         &:first-child {
             margin-top: 0;
         }
@@ -38,6 +42,7 @@
 
     &__area {
         min-height: 147px;
+        resize: none;
     }
 
     &__submit {

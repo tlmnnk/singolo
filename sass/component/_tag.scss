@@ -7,9 +7,15 @@
     font-weight: 400;
     border-radius: 5px;
     border: 1px solid $color-dark-title;
+    cursor: pointer;
+    transition: all .2s ease-out;
 
     &--selected {
         color: $color-light-bg;
         border-color: $color-light-bg;
+    }
+
+    &:hover {
+        background-color: #b67909;
     }
 }

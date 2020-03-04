@@ -1,0 +1,30 @@
+@import './abstarct/constants';
+
+@import './abstarct/placeholders';
+
+
+@import './layout/container';
+
+@import './base/base';
+
+@import './layout/layouts';
+
+//part1 was done without sass
+@import './component/header';
+@import './component/navigation';
+@import './component/slider';
+@import './component/services';
+//part2
+@import './component/portfolio';
+@import './component/about-us';
+@import './component/title';
+@import './component/tag';
+@import './component/employee';
+@import './component/socials';
+//part3
+@import './component/title';
+@import './component/get-quote';
+@import './component/form';
+@import './component/contact';
+@import './component/footer';
+@import './component/socials';
