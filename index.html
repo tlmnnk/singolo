@@ -9,19 +9,19 @@
 </head>
 <body> 
     <!-- HEADER START -->
-    <section class="header">
+    <section id="header" class="header">
         <div class="container">
             <div class="header__block">
                 <div class="header__logo">
                     <h1><a class="header__logo-link" href="#">SINGOLO<span>*</span></a></h1>
                 </div>
                 <nav class="nav">
-                    <ul class="nav__block">
-                        <li class="nav__item"><a class="nav__item-link nav__item-link--active" href="#">Home</a></li>
-                        <li class="nav__item"><a class="nav__item-link href="#">Services</a></li>
-                        <li class="nav__item"><a class="nav__item-link href="#">Portfolio</a></li>
-                        <li class="nav__item"><a class="nav__item-link href="#">About</a></li>
-                        <li class="nav__item"><a class="nav__item-link href="#">Contact</a></li>
+                    <ul id="menu" class="nav__block">
+                        <li class="nav__item"><a class="nav__item-link nav__item-link--active" href="#header">Home</a></li>
+                        <li class="nav__item"><a class="nav__item-link" href="#services">Services</a></li>
+                        <li class="nav__item"><a class="nav__item-link" href="#portfolio">Portfolio</a></li>
+                        <li class="nav__item"><a class="nav__item-link" href="#about-us">About</a></li>
+                        <li class="nav__item"><a class="nav__item-link" href="#contact">Contact</a></li>
                     </ul>
                 </nav>
             </div>
@@ -30,7 +30,7 @@
     <!-- HEADER END -->
 
     <!-- SLIDER START -->
-    <section class="slider">
+    <section id="slider" class="slider">
         <div class="container">
             <div class="slider__block">
                 <div class="slider__item">
@@ -83,7 +83,7 @@
     <!-- SLIDER END -->
 
     <!-- SERVICES START -->
-        <section class="services">
+    <section id="services" class="services">
             <div class="container">
                 <div class="services__header">
                     <div class="services__title">Our Services</div>
@@ -158,11 +158,11 @@
                     </div>
                 </div>
             </div>
-        </section>
+    </section>
     <!-- SERVICES END -->
 
     <!-- PORTFOLIO START-->
-    <section class="portfolio">
+    <section id="portfolio" class="portfolio">
         <div class="container">
             <div class="title">Portfolio</div>
             <div class="title__subtitle">Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.</div>
@@ -215,7 +215,7 @@
     <!-- PORTFOLIO END-->
 
     <!-- ABOUT-US START-->
-    <section class="about-us">
+    <section id="about-us" class="about-us">
         <div class="container">
             <div class="title">About Us</div>
             <div class="title__subtitle">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</div>
@@ -298,7 +298,7 @@
     <!-- ABOUT-US END-->
 
     <!--START GetQuote-->
-    <section class="get-quote">
+    <section id="contact" class="get-quote">
         <div class="container">
             <h2 class="title get-quote__title">Get a Quote</h2>
             <p class="title__subtitle get-quote__subtitle">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
@@ -352,5 +352,7 @@
         </div>
     </section>
     <!--END FOOTER-->
+
+    <script src="script.js"></script>
 </body>
 </html>
