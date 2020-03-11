@@ -8,6 +8,7 @@
 .slider__item {
     position: relative;
     display: flex;
+    max-height: 458px;
 }
 
 .slider__item-img {
@@ -97,4 +98,19 @@
 .slider__arrow:hover {
     opacity: 1;
     fill: #ebebeb;
+}
+
+.slide {
+    position: relative;
+    display: none;
+}
+
+.slide--active {
+    display: block;
+}
+
+.slider__item img {
+    display: block;
+    margin: 0 auto;
+    object-fit: contain;
 }

@@ -33,30 +33,37 @@
     <section id="slider" class="slider">
         <div class="container">
             <div class="slider__block">
-                <div class="slider__item">
-                    <div class="slider__item-vertical">                 
-                        <img
-                            class="slider__item-img"
-                            src="assets/iphone.png"
-                            alt="iphone">
-                        <div class="slider__item-wallpaper slider__item-wallpaper--v "></div>
-                        <img
-                            class="slider__item-shadow"
-                            src="assets/shadow-v.png">      
+                <div class="slide slide--active">
+                    <div class="slider__item">
+                        <div class="slider__item-vertical">                 
+                            <img
+                                class="slider__item-img"
+                                src="assets/iphone.png"
+                                alt="iphone">
+                            <div class="slider__item-wallpaper slider__item-wallpaper--v "></div>
+                            <img
+                                class="slider__item-shadow"
+                                src="assets/shadow-v.png">      
+                        </div>
+                        <div class="slider__item-horizontal">                
+                            <img 
+                                class="slider__item-img slider__item-img--horizontal"
+                                src="assets/iphone.png"
+                                alt="iphone">
+                                <div class="slider__item-wallpaper slider__item-wallpaper--h"></div>
+                            <img
+                                class="slider__item-shadow slider__item-shadow--h"
+                                src="assets/shadow-v.png" alt="">
+                        </div>
                     </div>
-                    <div class="slider__item-horizontal">                
-                        <img 
-                            class="slider__item-img slider__item-img--horizontal"
-                            src="assets/iphone.png"
-                            alt="iphone">
-                            <div class="slider__item-wallpaper slider__item-wallpaper--h"></div>
-                        <img
-                            class="slider__item-shadow slider__item-shadow--h"
-                            src="assets/shadow-v.png" alt="">
+                </div>     
+                <div class="slide">
+                    <div class="slider__item">
+                        <img src="assets/slide2.png" alt="slide-2">
                     </div>
                 </div>
             </div>
-            <div class="slider__arrow slider__arrow--left">
+            <div id="prev" class="slider__arrow slider__arrow--left">
                 <svg id='arrow' x="0px" y="0px"
 	                    viewBox="0 0 492.004 492.004" style="enable-background:new 0 0 492.004 492.004;" xml:space="preserve">
 	            <g>
@@ -67,7 +74,7 @@
 	                </g>
                 </svg>
             </div>
-            <div class="slider__arrow slider__arrow--right">
+            <div id="next" class="slider__arrow slider__arrow--right">
                 <svg id='arrow' x="0px" y="0px"
 	                    viewBox="0 0 492.004 492.004" style="enable-background:new 0 0 492.004 492.004;" xml:space="preserve">
 	            <g>
