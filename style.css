@@ -28,6 +28,7 @@ a {
 
 html {
   font-size: 10px;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -241,6 +242,11 @@ h3 {
 .slide {
   position: relative;
   display: none;
+}
+
+.slide__2--styles {
+  background-color: #648BF0;
+  border-bottom: solid 6px #648BF0;
 }
 
 .slide--active {
