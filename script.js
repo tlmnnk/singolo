@@ -3,13 +3,21 @@ document.addEventListener('DOMContentLoaded', () => {
     const menuItems = document.querySelectorAll('li a');
 
     const slider = document.getElementById('slider');
-    
-
     const prev = document.getElementById('prev');
     const next = document.getElementById('next');
     const slides = document.querySelectorAll('.slide');
     const totalSlides = slides.length;
     let index = 0;
+
+    const iphone =  document.querySelectorAll('.slider__item-img');
+    iphone.forEach(item => {
+        item.addEventListener('click', blackDisplayIphone);
+    });
+
+    function blackDisplayIphone(e) {
+        const wallpaper = e.target.parentNode.querySelector('.slider__item-wallpaper');
+        wallpaper.style.backgroundImage = 'none';
+    }
 
     //Navigation
     navMenu.addEventListener('click', (event) => {
