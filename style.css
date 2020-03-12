@@ -532,13 +532,13 @@ h3 {
   margin-top: 0px;
 }
 .contact__geo {
-  background-image: url("../assets/geo.png");
+  background-image: url("assets/geo.png");
 }
 .contact__tel {
-  background-image: url("../assets/tel.png");
+  background-image: url("assets/tel.png");
 }
 .contact__email {
-  background-image: url("../assets/mail.png");
+  background-image: url("assets/mail.png");
 }
 
 .footer {

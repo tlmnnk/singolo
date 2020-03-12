@@ -26,16 +26,16 @@
 
     &__geo {
         @extend %contact-icon;
-        background-image: url('../assets/geo.png');
+        background-image: url('assets/geo.png');
     }
 
     &__tel {
         @extend %contact-icon;
-        background-image: url('../assets/tel.png');
+        background-image: url('assets/tel.png');
     }
 
     &__email {
         @extend %contact-icon;
-        background-image: url('../assets/mail.png');
+        background-image: url('assets/mail.png');
     }
 }
