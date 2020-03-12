@@ -15,11 +15,13 @@
     }
 
     &__descr {
+        max-height: 44px;
         margin-top: 10px;
         font-size: 1.2rem;
         line-height: 2.2rem;
         color: $color-dark-text;
         font-weight: 400;
+        overflow: hidden;
     }
 
     &__socials {
