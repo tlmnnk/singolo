@@ -13,6 +13,15 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const portfolioGridItems = document.querySelectorAll('.portfolio__item');
 
+    const form = document.querySelector('.form');
+    console.log(form);
+    form.addEventListener('submit', (e) => {
+        e.preventDefault();
+        const topic = document.getElementById('subject').value ? document.getElementById('subject').value : 'Без темы';
+        const description = document.getElementById('area').value ? document.getElementById('area').value : 'Без описания';
+        //Modal window opens over body....
+    });
+
 
     //portfolio item border
     portfolioGridItems.forEach(item => {
