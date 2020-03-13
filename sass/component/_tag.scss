@@ -16,6 +16,7 @@
     }
 
     &:hover {
-        background-color: #b67909;
+        color: $color-light-bg;
+        border-color: $color-light-bg;
     }
 }

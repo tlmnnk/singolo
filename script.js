@@ -10,12 +10,35 @@ document.addEventListener('DOMContentLoaded', () => {
     let index = 0;
 
     const iphone =  document.querySelectorAll('.slider__item-img');
+
+    const portfolioGridItems = document.querySelectorAll('.portfolio__item');
+
+
+    //portfolio item border
+    portfolioGridItems.forEach(item => {
+        item.addEventListener('click', portfolioItemBorder);
+    });
     iphone.forEach(item => {
         item.addEventListener('click', blackDisplayIphone);
     });
 
-    function blackDisplayIphone(e) {
+    function portfolioItemBorder(e) {
         
+        const targetClasses = e.target.parentNode.classList;
+        console.log(targetClasses.contains('portfolio__item--border'));
+        if(targetClasses.contains('portfolio__item--border')) {
+            targetClasses.remove('portfolio__item--border');
+        } else {
+            portfolioGridItems.forEach(item => {
+                item.classList.remove('portfolio__item--border');
+            });
+            targetClasses.add('portfolio__item--border');
+        } 
+       
+    }
+
+    function blackDisplayIphone(e) {
+
         const wallpaper = e.target.parentNode.querySelector('.slider__item-wallpaper--blackening');
         const iphoneStyles = window.getComputedStyle(wallpaper);
         iphoneStyles.backgroundColor === 'rgba(0, 0, 0, 0)' ? wallpaper.style.backgroundColor = 'rgba(0, 0, 0)' : wallpaper.style.backgroundColor = 'rgba(0, 0, 0, 0)';
@@ -30,7 +53,6 @@ document.addEventListener('DOMContentLoaded', () => {
     prev.addEventListener('click', prevSlide);
     next.addEventListener('click', nextSlide);
 
-    
     function nextSlide() {
         let sliderStyles = window.getComputedStyle(slider);
         sliderStyles.backgroundColor === 'rgb(240, 108, 100)' ? slider.style.backgroundColor = 'rgb(100, 139, 240)' : slider.style.backgroundColor = 'rgb(240, 108, 100)';
