@@ -3,6 +3,7 @@
     padding-bottom: 84px;
     background-color: rgb(240, 108, 100);
     border-bottom: solid 6px #ea676b;
+    transition: all .2s ease-out;
 }
 
 .slider__item {
@@ -14,6 +15,7 @@
 .slider__item-img {
     display: block;
     z-index: 3;
+    cursor: pointer;
 }
 
 .slider__item-vertical {
@@ -40,15 +42,18 @@
     overflow: hidden;
     z-index: -1;
 
-    &:after {
-        content: '';
+    
+
+    &--blackening {
         position: absolute;
         top: 0;
         bottom: 0;
         left: 0;
         right: 0;
-        background-color: #000;
-        z-index: -2;
+        background-color: rgba(0, 0, 0, 0);
+
+
+        transition: all .4s linear;
     }
 }
 
@@ -114,6 +119,7 @@
 .slide {
     position: relative;
     display: none;
+    transition: all .9s linear;
 }
 
 .slide__2--styles {
@@ -123,6 +129,7 @@
 
 .slide--active {
     display: block;
+    
 }
 
 .slider__item img {

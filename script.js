@@ -15,8 +15,10 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     function blackDisplayIphone(e) {
-        const wallpaper = e.target.parentNode.querySelector('.slider__item-wallpaper');
-        wallpaper.style.backgroundImage = 'none';
+        
+        const wallpaper = e.target.parentNode.querySelector('.slider__item-wallpaper--blackening');
+        const iphoneStyles = window.getComputedStyle(wallpaper);
+        iphoneStyles.backgroundColor === 'rgba(0, 0, 0, 0)' ? wallpaper.style.backgroundColor = 'rgba(0, 0, 0)' : wallpaper.style.backgroundColor = 'rgba(0, 0, 0, 0)';
     }
 
     //Navigation
