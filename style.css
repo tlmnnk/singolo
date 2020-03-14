@@ -56,8 +56,10 @@ h3 {
   justify-content: space-between;
 }
 .layout-4-colomn {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 20px;
+  grid-auto-flow: row;
   max-height: 620px;
   overflow: hidden;
 }
@@ -359,19 +361,19 @@ h3 {
 }
 .portfolio__tags {
   margin-top: 12px;
+  margin-bottom: 19px;
 }
 .portfolio__item {
-  margin-top: 19px;
-  margin-right: 20px;
   width: 220px;
   height: 187px;
   transition: all 0.2s linear;
 }
-.portfolio__item:nth-child(4n) {
-  margin-right: 0;
-}
 .portfolio__item--border {
   border: 5px solid #F06C64;
+}
+.portfolio__item--hidden {
+  transform: scale(0);
+  position: absolute;
 }
 .portfolio__item > img {
   position: relative;

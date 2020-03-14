@@ -11,8 +11,10 @@
     }
 
     &-4-colomn {
-        display: flex;
-        flex-wrap: wrap;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        gap: 20px;
+        grid-auto-flow: row;
         max-height: 620px;
         overflow: hidden;
     }
