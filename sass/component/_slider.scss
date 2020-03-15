@@ -100,6 +100,7 @@
     opacity: 0.4;
     top: 50%;
     cursor: pointer;
+    user-select: none;
 }
 
 .slider__arrow--left {
@@ -120,6 +121,7 @@
     position: relative;
     display: none;
     transition: all .9s linear;
+    user-select: none;
 }
 
 .slide__2--styles {

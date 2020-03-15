@@ -309,7 +309,7 @@
     </section>
     <!-- ABOUT-US END-->
 
-    <!--START GetQuote-->
+   <!--START GetQuote-->
     <section id="contact" class="get-quote">
         <div class="container">
             <h2 class="title get-quote__title">Get a Quote</h2>
@@ -320,7 +320,7 @@
                     <input class="form__email" id="email" type="email" placeholder="Email (Requred)" required>
                     <input class="form__subject" id="subject" type="text" placeholder="Subject">
                     <label for="area"> </label>
-                    <textarea class="form__area" name="area" id="area" placeholder="Describe your project in detail..."></textarea>
+                    <textarea class="form__area" name="area" id="area" placeholder="Describe your project in detail..." maxlength="590"></textarea>
                     <input class="form__submit" type="submit" value="Submit">
                 </form>
                 <div class="contact">
@@ -364,7 +364,14 @@
         </div>
     </section>
     <!--END FOOTER-->
-
+    <div class="overlay overlay--hidden">
+        <div class="modal">
+            <h4>Письмо отправлено</h4>
+            <p>Тема: <span id="modal__topic"></span></p>
+            <p>Описание: <span id="modal__description"></span></p>
+            <button class="modal__btn">OK</button>
+        </div>
+    </div>
     <script src="script.js"></script>
 </body>
 </html>
