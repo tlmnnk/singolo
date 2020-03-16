@@ -55,6 +55,7 @@ h3 {
   justify-content: space-between;
 }
 .layout-4-colomn {
+  padding: 5px;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   gap: 20px;
@@ -70,6 +71,9 @@ h3 {
   top: 0;
   z-index: 6;
   width: 100%;
+}
+.header--shadow {
+  box-shadow: 0 4px 30px -5px rgba(0, 0, 0, 0.2);
 }
 
 .header__logo {
@@ -374,12 +378,13 @@ h3 {
   margin-bottom: 19px;
 }
 .portfolio__item {
-  width: 220px;
+  max-width: 220px;
   height: 187px;
-  transition: all 0.2s linear;
 }
 .portfolio__item--border {
-  border: 5px solid #F06C64;
+  outline: 5px solid #F06C64;
+  transition: all 0.1s linear;
+  z-index: 3;
 }
 .portfolio__item--hidden {
   transform: scale(0);
@@ -389,7 +394,6 @@ h3 {
   position: relative;
   width: 100%;
   height: 100%;
-  object-fit: cover;
 }
 
 .about-us {
@@ -642,62 +646,6 @@ h3 {
 
 .social-svg {
   cursor: pointer;
-}
-
-.overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  overflow-y: hidden;
-  z-index: 4;
-}
-.overlay--hidden {
-  display: none;
-}
-
-.modal {
-  padding: 20px;
-  position: relative;
-  width: 40%;
-  min-height: 20%;
-  background-color: #f2f2f2;
-  border-radius: 10px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  align-items: center;
-}
-.modal > * {
-  color: #767e9e;
-  font-weight: 900;
-  font-size: 2.5rem;
-}
-.modal > * span {
-  color: #2d303a;
-  font-weight: 600;
-  font-size: 2rem;
-}
-.modal__btn {
-  display: block;
-  padding: 10px 50px;
-  background-color: #f48c8f;
-  border-radius: 10px;
-  outline: none;
-  cursor: pointer;
-  transition: all 0.2s ease-out;
-}
-.modal__btn:hover {
-  background-color: #d6564f;
-}
-
-.scroll-hidden {
-  overflow: hidden;
 }
 
 /*# sourceMappingURL=style.css.map */
