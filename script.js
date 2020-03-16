@@ -2,6 +2,8 @@ window.onload = function() {
     //DOMContentLoaded - when dom loaded
     //window.onload - when all loaded including styles
   
+    headerOnScrollResize();
+
     navMenuHandler();
 
     sliderArrowClickHandler();
@@ -14,6 +16,13 @@ window.onload = function() {
 
     addSubmitHandler();
    
+};
+
+const headerOnScrollResize = () => {
+    const header = document.querySelector('.header__block');
+    window.addEventListener('scroll', () => {
+		window.scrollY > 70 ? header.classList.add('header__block--resize') : header.classList.remove('header__block--resize');
+	});
 };
 
 const navMenuHandler = () => {

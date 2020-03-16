@@ -33,7 +33,6 @@ html {
 
 body {
   margin: 0 auto;
-  max-width: 1020px;
   font-family: "Lato", sans-serif;
   font-size: 1.6rem;
   font-weight: 400;
@@ -67,6 +66,10 @@ h3 {
 .header {
   background-color: #2d303a;
   border-bottom: solid 6px #323746;
+  position: fixed;
+  top: 0;
+  z-index: 6;
+  width: 100%;
 }
 
 .header__logo {
@@ -89,6 +92,10 @@ h3 {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  transition: all 0.4s;
+}
+.header__block--resize {
+  padding: 5px 0 6px;
 }
 
 .nav__block {
@@ -141,7 +148,7 @@ h3 {
 }
 
 .slider {
-  padding-top: 53px;
+  padding-top: 148px;
   padding-bottom: 84px;
   background-color: #f06c64;
   border-bottom: solid 6px #ea676b;
@@ -152,6 +159,7 @@ h3 {
   position: relative;
   display: flex;
   max-height: 458px;
+  user-select: none;
 }
 
 .slider__item-img {

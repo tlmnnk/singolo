@@ -1,5 +1,5 @@
 .slider {
-    padding-top: 53px;
+    padding-top: 148px;
     padding-bottom: 84px;
     background-color: rgb(240, 108, 100);
     border-bottom: solid 6px #ea676b;
@@ -10,11 +10,13 @@
     position: relative;
     display: flex;
     max-height: 458px;
+    user-select: none;
 }
 
 .slider__item-img {
     display: block;
     z-index: 3;
+    
     cursor: pointer;
 }
 
