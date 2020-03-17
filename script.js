@@ -175,4 +175,15 @@ const closeModal = () => {
         document.querySelector('.overlay').classList.add('overlay--hidden');
         document.querySelector('body').classList.remove('scroll-hidden');
     });
+    resetInputValues();
+};
+
+const resetInputValues = () => {
+
+    document.getElementById('name').value = '';
+    document.getElementById('email').value = '';
+    
+    if(document.getElementById('subject').value) document.getElementById('subject').value = '';
+
+    if(document.getElementById('area').value) document.getElementById('area').value = '';
 };
