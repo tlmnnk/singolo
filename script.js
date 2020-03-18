@@ -4,8 +4,6 @@ window.onload = function() {
   
     headerOnScrollResize();
 
-    navMenuHandler();
-
     sliderArrowClickHandler();
 
     iphoneClickHandler();
@@ -21,21 +19,49 @@ window.onload = function() {
 const headerOnScrollResize = () => {
     const header = document.querySelector('.header__block');
     window.addEventListener('scroll', () => {
-		window.scrollY > 70 ? header.classList.add('header__block--resize') : header.classList.remove('header__block--resize');
+        window.scrollY > 70 ? header.classList.add('header__block--resize') : header.classList.remove('header__block--resize');
+        navMenuItemSelectedOnScroll();
 	});
 };
 
 const navMenuHandler = () => {
     const navMenu = document.getElementById('menu');
-    const menuItems = document.querySelectorAll('li a');
+    
     navMenu.addEventListener('click', (event) => {
-        menuItems.forEach(item => item.classList.remove('nav__item-link--active'));
+        document.querySelectorAll('.nav__item-link').forEach(item => item.classList.remove('nav__item-link--active'));
         event.target.classList.add('nav__item-link--active');
     });
 };
 
+const navMenuItemSelectedOnScroll = () => {
+    const curPos = window.scrollY;
+    const sections = document.querySelectorAll('body > section');
+    const navLinks = document.querySelectorAll('.nav__item-link');
+    sections.forEach(section => {
+        if((section.offsetTop - 200) <= curPos && (section.offsetTop + section.offsetHeight - 200) > curPos) {
+            navLinks.forEach(link => {
+                link.classList.remove('nav__item-link--active');
+                if(section.getAttribute('id') === link.getAttribute('href').substr(1)) {
+                    link.classList.add('nav__item-link--active');
+                }
+            });
+            document.querySelectorAll('.nav__item-link');
+        }
+        if(curPos >= 2400) {
+            navLinks.forEach(link => {
+                link.classList.remove('nav__item-link--active');});
+            navLinks[4].classList.add('nav__item-link--active');
+        }
+        if(curPos >= 2400) {
+            navLinks.forEach(link => {
+                link.classList.remove('nav__item-link--active');});
+            navLinks[4].classList.add('nav__item-link--active');
+        }
+    });
+};
+
 const sliderArrowClickHandler = () => {
-    const slider = document.getElementById('slider');
+    const slider = document.getElementById('home');
     const prev = document.getElementById('prev');
     const next = document.getElementById('next');
     const slides = document.querySelectorAll('.slide');
@@ -86,7 +112,6 @@ const addTagsClickHandler = () => {
     document.querySelector('.portfolio__tags').addEventListener('click', (e) => {
         if(e.target.classList.contains('tag')) {
             let target = e.target;
-            //console.log(e);
             removeSelectedTags();
             selectClickedTag(target);
             if(target.innerText === 'All') {
@@ -136,7 +161,6 @@ const portfolioItemClickHandler = () => {
     function portfolioItemBorder(e) {
         
         const targetClasses = e.target.parentNode.classList;
-        console.log(e);
         if(targetClasses.contains('portfolio__item--border')) {
             targetClasses.remove('portfolio__item--border');
         } else {

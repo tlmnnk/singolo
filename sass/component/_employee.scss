@@ -12,6 +12,11 @@
 
     &__photo {
         height: 300px;
+
+        &:hover {
+            opacity: .8;
+            transition: all .2s;
+        }
     }
 
     &__descr {
