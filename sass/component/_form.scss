@@ -52,8 +52,23 @@
 
     &__submit {
         margin-left: auto;
+        margin-top: 16px;
+        padding: 10px 15px;
+        width: 110px ;
         display: block;
-        width: 90px !important;
+        
+        background-color: rgb(251,198,95);
+        color: $color-dark-title;
+        font-weight: 700;
+        
+        border-radius: 5px;
+        border: none;
+        outline: none;
+        transition: all .3s;
         cursor: pointer;
+
+        &:hover {
+            background-color: rgb(230, 178, 74);
+        }
     }
 }

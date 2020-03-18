@@ -380,13 +380,22 @@ h3 {
   margin-top: 12px;
   margin-bottom: 19px;
 }
+.portfolio__layout {
+  padding: 10px;
+}
 .portfolio__item {
   max-width: 220px;
   height: 187px;
 }
 .portfolio__item--border {
   outline: 5px solid #F06C64;
-  transition: all 0.1s linear;
+  transition: all 0.2s linear;
+}
+.portfolio__item--border:not(:hover) {
+  outline: none;
+  -webkit-box-shadow: 0px 0px 10px 2px #f06c64;
+  -moz-box-shadow: 0px 0px 10px 2px #f06c64;
+  box-shadow: 0px 0px 10px 2px #f06c64;
 }
 .portfolio__item--transparent {
   outline: 5px solid transparent;
@@ -583,9 +592,21 @@ h3 {
 }
 .form__submit {
   margin-left: auto;
+  margin-top: 16px;
+  padding: 10px 15px;
+  width: 110px;
   display: block;
-  width: 90px !important;
+  background-color: #fbc65f;
+  color: #666d89;
+  font-weight: 700;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  transition: all 0.3s;
   cursor: pointer;
+}
+.form__submit:hover {
+  background-color: #e6b24a;
 }
 
 .contact {
