@@ -73,7 +73,7 @@ const sliderArrowClickHandler = () => {
 
     function nextSlide() {
         let sliderStyles = window.getComputedStyle(slider);
-        sliderStyles.backgroundColor === 'rgb(240, 108, 100)' ? slider.style.backgroundColor = 'rgb(100, 139, 240)' : slider.style.backgroundColor = 'rgb(240, 108, 100)';
+        //sliderStyles.backgroundColor === 'rgb(240, 108, 100)' ? slider.style.backgroundColor = 'rgb(100, 139, 240)' : slider.style.backgroundColor = 'rgb(240, 108, 100)';
         index++;
         if(index === totalSlides) {index = 0;}
     
@@ -85,7 +85,7 @@ const sliderArrowClickHandler = () => {
     
     function prevSlide() {
         let sliderStyles = window.getComputedStyle(slider);
-        sliderStyles.backgroundColor === 'rgb(240, 108, 100)' ? slider.style.backgroundColor = 'rgb(100, 139, 240)' : slider.style.backgroundColor = 'rgb(240, 108, 100)';
+        //sliderStyles.backgroundColor === 'rgb(240, 108, 100)' ? slider.style.backgroundColor = 'rgb(100, 139, 240)' : slider.style.backgroundColor = 'rgb(240, 108, 100)';
     
         if(index === 0) {index = totalSlides;}
         index--;
