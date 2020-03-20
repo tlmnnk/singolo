@@ -100,7 +100,7 @@ h3 {
   transition: all 0.4s;
 }
 .header__block--resize {
-  padding: 5px 0 6px;
+  padding: 0 0 2px;
 }
 
 .nav__block {
@@ -153,7 +153,7 @@ h3 {
 }
 
 .slider {
-  padding-top: 148px;
+  padding-top: 64px;
   padding-bottom: 80px;
   height: 695px;
   background-color: #f06c64;
@@ -161,7 +161,7 @@ h3 {
   transition: all 0.2s ease-out;
 }
 .slider > .container {
-  height: 100%;
+  height: 115%;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -172,6 +172,7 @@ h3 {
   width: 100%;
   display: flex;
   justify-content: center;
+  align-items: center;
   overflow: hidden;
 }
 
@@ -284,13 +285,18 @@ h3 {
 .slide {
   width: 100%;
   position: absolute;
-  transition: all 0.5s ease-out;
+  display: none;
+  animation: 0.5s ease-in-out;
   user-select: none;
 }
 
 .slide__2--styles {
   background-color: #648BF0;
   border-bottom: solid 6px #648BF0;
+}
+
+.slide-active {
+  display: block;
 }
 
 .slider__item img {
@@ -303,20 +309,44 @@ h3 {
   visibility: hidden;
 }
 
-.slide-right {
-  transform: translateX(100%);
-  transition: all 0.4s ease-out;
+.slide-next {
+  display: block;
 }
 
-.slide-left {
-  transform: translateX(-100%);
+.slide-to-left {
+  animation-name: left;
 }
 
-.slide-center {
-  transform: translateX(0);
-  transition: all 0.4s ease-out;
+.slide-to-right {
+  animation-name: right;
+  animation-direction: reverse;
 }
 
+.slide-from-left {
+  animation-name: left;
+  animation-direction: reverse;
+}
+
+.slide-from-right {
+  animation-name: right;
+}
+
+@keyframes left {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+@keyframes right {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
 .services {
   padding-bottom: 35px;
   text-align: justify;
@@ -529,7 +559,7 @@ h3 {
   transition: all 0.2s ease-out;
 }
 .social:hover {
-  background-color: #b67909;
+  background-color: #fbc65f;
 }
 .social__object {
   display: block;
@@ -614,6 +644,11 @@ h3 {
 .form > input:hover, .form > input:focus, .form textarea:hover, .form textarea:focus {
   background-color: #923c42;
 }
+.form > input:focus, .form textarea:focus {
+  -webkit-box-shadow: 0px 0px 16px 5px #ffdb58;
+  -moz-box-shadow: 0px 0px 16px 5px #ffdb58;
+  box-shadow: 0px 0px 16px 5px #ffdb58;
+}
 .form__area {
   min-height: 147px;
   resize: none;
@@ -626,7 +661,7 @@ h3 {
   display: block;
   background-color: #fbc65f;
   color: #666d89;
-  font-weight: 700;
+  font-weight: 600;
   border-radius: 5px;
   border: none;
   outline: none;
@@ -634,7 +669,7 @@ h3 {
   cursor: pointer;
 }
 .form__submit:hover {
-  background-color: #e6b24a;
+  background-color: #ffefa8;
 }
 
 .contact {
@@ -715,11 +750,13 @@ h3 {
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
+  overflow: hidden;
 }
 .modal > * {
   color: #767e9e;
   font-weight: 900;
   font-size: 2.5rem;
+  word-wrap: break-word;
 }
 .modal > * span {
   color: #2d303a;

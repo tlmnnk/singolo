@@ -44,7 +44,7 @@
                 </svg>
             </div>
             <div class="slider__block">
-                <div class="slide">
+                <div class="slide slide-active">
                     <div class="slider__item">
                         <div class="slider__item-vertical">                 
                             <img
@@ -73,7 +73,7 @@
                         </div>
                     </div>
                 </div>     
-                <div class="slide slide-hide">
+                <div class="slide">
                     <div class="slider__item">
                         <img src="assets/slide2.png" alt="slide-2">
                     </div>
@@ -317,9 +317,9 @@
             <p class="title__subtitle get-quote__subtitle">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
             <div class="layout-2-column get-quote__contact">
                 <form class="form" method="POST" action="/">
-                    <input class="form__name" id="name" type="name" placeholder="Name (Requred)" required>
-                    <input class="form__email" id="email" type="email" placeholder="Email (Requred)" required>
-                    <input class="form__subject" id="subject" type="text" placeholder="Subject">
+                    <input class="form__name" id="name" type="name" placeholder="Name (Requred)" required maxlength="30">
+                    <input class="form__email" id="email" type="email" placeholder="Email (Requred)" required maxlength="20">
+                    <input class="form__subject" id="subject" type="text" placeholder="Subject" maxlength="50">
                     <label for="area"> </label>
                     <textarea class="form__area" name="area" id="area" placeholder="Describe your project in detail..." maxlength="590"></textarea>
                     <button class="form__submit" type="submit">SEND</button>
