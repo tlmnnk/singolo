@@ -66,34 +66,53 @@ const sliderArrowClickHandler = () => {
     const next = document.getElementById('next');
     const slides = document.querySelectorAll('.slide');
     const totalSlides = slides.length;
-    let index = 0;
+    let slideIndex = 0;
+
+    const nextSlide = () => {
+        let sliderStyles = window.getComputedStyle(slider);
+      
+        //const activeSlide = 
+        //sliderStyles.backgroundColor === 'rgb(240, 108, 100)' ? slider.style.backgroundColor = 'rgb(100, 139, 240)' : slider.style.backgroundColor = 'rgb(240, 108, 100)';
+        //move slides[slideIndex] to the right
+        slides[slideIndex].classList.add('slide-right');
+        slides[slideIndex].classList.add('slide-hide');
+        //slides[slideIndex].classList.add('slide-left');
+        slideIndex++;
+        if(slideIndex === totalSlides) {slideIndex = 0;}
+        //move slides[slideIndex] to left and then to center;
+        //slides[slideIndex].classList.add('slide-left');
+        
+        setTimeout(() => slides[slideIndex].classList.remove('slide-hide'), 300);
+        setTimeout(() => slides[slideIndex].classList.add('slide-center'), 500);
+        setTimeout(() => slides[slideIndex].classList.remove('slide-left'), 500);
+        setTimeout(() => slides[slideIndex - 1].classList.remove('slide-right'), 600);
+        console.log(slideIndex);
+        
+        
+        //smoothClassChange(slides[slideIndex], 'slide--active');
+        //slides[slideIndex].classList.add('slide--active'); 
+    };
+    
+    const prevSlide = () => {
+        let sliderStyles = window.getComputedStyle(slider);
+        sliderStyles.backgroundColor === 'rgb(240, 108, 100)' ? slider.style.backgroundColor = 'rgb(100, 139, 240)' : slider.style.backgroundColor = 'rgb(240, 108, 100)';
+    
+        if(slideIndex === 0) {slideIndex = totalSlides;}
+        slideIndex--;
+        for(let i = 0; i < totalSlides; i++) {
+            slides[i].classList.remove('slide--active');
+        }
+        slides[slideIndex].classList.add('slide--active');
+        //smoothClassChange(slides[slideIndex], 'slide--active');
+    };
 
     prev.addEventListener('click', prevSlide);
     next.addEventListener('click', nextSlide);
+};
 
-    function nextSlide() {
-        let sliderStyles = window.getComputedStyle(slider);
-        sliderStyles.backgroundColor === 'rgb(240, 108, 100)' ? slider.style.backgroundColor = 'rgb(100, 139, 240)' : slider.style.backgroundColor = 'rgb(240, 108, 100)';
-        index++;
-        if(index === totalSlides) {index = 0;}
-    
-        for(let i = 0; i < totalSlides; i++) {
-            slides[i].classList.remove('slide--active');
-        }
-        slides[index].classList.add('slide--active'); 
-    }
-    
-    function prevSlide() {
-        let sliderStyles = window.getComputedStyle(slider);
-        sliderStyles.backgroundColor === 'rgb(240, 108, 100)' ? slider.style.backgroundColor = 'rgb(100, 139, 240)' : slider.style.backgroundColor = 'rgb(240, 108, 100)';
-    
-        if(index === 0) {index = totalSlides;}
-        index--;
-        for(let i = 0; i < totalSlides; i++) {
-            slides[i].classList.remove('slide--active');
-        }
-        slides[index].classList.add('slide--active');
-    }
+const smoothClassChange = (element, classToAdd) => {
+    element.classList.add(classToAdd);
+    setTimeout(() => element.classList.remove(classToAdd), 300);
 };
 
 const iphoneClickHandler = () => {

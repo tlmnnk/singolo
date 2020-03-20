@@ -154,15 +154,32 @@ h3 {
 
 .slider {
   padding-top: 148px;
-  padding-bottom: 84px;
+  padding-bottom: 80px;
+  height: 695px;
   background-color: #f06c64;
   border-bottom: solid 6px #ea676b;
   transition: all 0.2s ease-out;
+}
+.slider > .container {
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.slider__block {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
 }
 
 .slider__item {
   position: relative;
   display: flex;
+  justify-content: space-between;
+  align-items: center;
   max-height: 458px;
   user-select: none;
 }
@@ -174,7 +191,7 @@ h3 {
 }
 
 .slider__item-vertical {
-  margin-left: 72px;
+  margin-left: 58px;
   position: relative;
   z-index: 2;
 }
@@ -232,8 +249,7 @@ h3 {
 }
 
 .slider__item-horizontal {
-  margin-left: auto;
-  margin-right: 219px;
+  margin-right: 202px;
   position: relative;
   z-index: 2;
 }
@@ -244,23 +260,20 @@ h3 {
 }
 
 .slider__arrow {
-  position: absolute;
   height: 30px;
   width: 16px;
   background-repeat: no-repeat;
   opacity: 0.4;
-  top: 50%;
   cursor: pointer;
   user-select: none;
 }
 
 .slider__arrow--left {
-  transform: rotate(180deg) scale(1.7) translateY(29%);
+  transform: rotate(180deg) scale(1.7);
 }
 
 .slider__arrow--right {
-  transform: scale(1.7) translateY(15%);
-  right: 0;
+  transform: scale(1.7) translateY(45%);
 }
 
 .slider__arrow:hover {
@@ -269,9 +282,9 @@ h3 {
 }
 
 .slide {
-  position: relative;
-  display: none;
-  transition: all 0.9s linear;
+  width: 100%;
+  position: absolute;
+  transition: all 0.5s ease-out;
   user-select: none;
 }
 
@@ -280,14 +293,28 @@ h3 {
   border-bottom: solid 6px #648BF0;
 }
 
-.slide--active {
-  display: block;
-}
-
 .slider__item img {
   display: block;
   margin: 0 auto;
   object-fit: contain;
+}
+
+.slide-hide {
+  visibility: hidden;
+}
+
+.slide-right {
+  transform: translateX(100%);
+  transition: all 0.4s ease-out;
+}
+
+.slide-left {
+  transform: translateX(-100%);
+}
+
+.slide-center {
+  transform: translateX(0);
+  transition: all 0.4s ease-out;
 }
 
 .services {
