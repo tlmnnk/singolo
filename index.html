@@ -9,19 +9,19 @@
 </head>
 <body> 
     <!-- HEADER START -->
-    <section class="header">
+    <section id="header" class="header">
         <div class="container">
             <div class="header__block">
                 <div class="header__logo">
                     <h1><a class="header__logo-link" href="#">SINGOLO<span>*</span></a></h1>
                 </div>
                 <nav class="nav">
-                    <ul class="nav__block">
-                        <li class="nav__item"><a class="nav__item-link nav__item-link--active" href="#">Home</a></li>
-                        <li class="nav__item"><a class="nav__item-link href="#">Services</a></li>
-                        <li class="nav__item"><a class="nav__item-link href="#">Portfolio</a></li>
-                        <li class="nav__item"><a class="nav__item-link href="#">About</a></li>
-                        <li class="nav__item"><a class="nav__item-link href="#">Contact</a></li>
+                    <ul id="menu" class="nav__block">
+                        <li class="nav__item"><a class="nav__item-link nav__item-link--active" href="#home">Home</a></li>
+                        <li class="nav__item"><a class="nav__item-link" href="#services">Services</a></li>
+                        <li class="nav__item"><a class="nav__item-link" href="#portfolio">Portfolio</a></li>
+                        <li class="nav__item"><a class="nav__item-link" href="#about-us">About</a></li>
+                        <li class="nav__item"><a class="nav__item-link" href="#contact">Contact</a></li>
                     </ul>
                 </nav>
             </div>
@@ -30,33 +30,9 @@
     <!-- HEADER END -->
 
     <!-- SLIDER START -->
-    <section class="slider">
+    <section id="home" class="slider">
         <div class="container">
-            <div class="slider__block">
-                <div class="slider__item">
-                    <div class="slider__item-vertical">                 
-                        <img
-                            class="slider__item-img"
-                            src="assets/iphone.png"
-                            alt="iphone">
-                        <div class="slider__item-wallpaper slider__item-wallpaper--v "></div>
-                        <img
-                            class="slider__item-shadow"
-                            src="assets/shadow-v.png">      
-                    </div>
-                    <div class="slider__item-horizontal">                
-                        <img 
-                            class="slider__item-img slider__item-img--horizontal"
-                            src="assets/iphone.png"
-                            alt="iphone">
-                            <div class="slider__item-wallpaper slider__item-wallpaper--h"></div>
-                        <img
-                            class="slider__item-shadow slider__item-shadow--h"
-                            src="assets/shadow-v.png" alt="">
-                    </div>
-                </div>
-            </div>
-            <div class="slider__arrow slider__arrow--left">
+            <div id="prev" class="slider__arrow slider__arrow--left">
                 <svg id='arrow' x="0px" y="0px"
 	                    viewBox="0 0 492.004 492.004" style="enable-background:new 0 0 492.004 492.004;" xml:space="preserve">
 	            <g>
@@ -67,7 +43,44 @@
 	                </g>
                 </svg>
             </div>
-            <div class="slider__arrow slider__arrow--right">
+            <div class="slider__block">
+                <div class="slide slide-active">
+                    <div class="slider__item">
+                        <div class="slider__item-vertical">                 
+                            <img
+                                class="slider__item-img"
+                                src="assets/iphone.png"
+                                alt="iphone">
+                            <div class="slider__item-wallpaper slider__item-wallpaper--v ">
+                                <div class="slider__item-wallpaper--blackening"></div>
+                            </div>
+                            
+                            <img
+                                class="slider__item-shadow"
+                                src="assets/shadow-v.png">      
+                        </div>
+                        <div class="slider__item-horizontal">                
+                            <img 
+                                class="slider__item-img slider__item-img--horizontal"
+                                src="assets/iphone.png"
+                                alt="iphone">
+                                <div class="slider__item-wallpaper slider__item-wallpaper--h">
+                                    <div class="slider__item-wallpaper--blackening"></div>
+                                </div>
+                            <img
+                                class="slider__item-shadow slider__item-shadow--h"
+                                src="assets/shadow-v.png" alt="">
+                        </div>
+                    </div>
+                </div>     
+                <div class="slide">
+                    <div class="slider__item">
+                        <img src="assets/slide2.png" alt="slide-2">
+                    </div>
+                </div>
+            </div>
+            
+            <div id="next" class="slider__arrow slider__arrow--right">
                 <svg id='arrow' x="0px" y="0px"
 	                    viewBox="0 0 492.004 492.004" style="enable-background:new 0 0 492.004 492.004;" xml:space="preserve">
 	            <g>
@@ -83,7 +96,7 @@
     <!-- SLIDER END -->
 
     <!-- SERVICES START -->
-        <section class="services">
+    <section id="services" class="services">
             <div class="container">
                 <div class="services__header">
                     <div class="services__title">Our Services</div>
@@ -158,11 +171,11 @@
                     </div>
                 </div>
             </div>
-        </section>
+    </section>
     <!-- SERVICES END -->
 
     <!-- PORTFOLIO START-->
-    <section class="portfolio">
+    <section id="portfolio" class="portfolio">
         <div class="container">
             <div class="title">Portfolio</div>
             <div class="title__subtitle">Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.</div>
@@ -173,40 +186,40 @@
                 <span class="tag">Artwork</span>
             </div>
             <div class="layout-4-colomn portfolio__layout">
-                <div class="portfolio__item">
+                <div class="portfolio__item" data-tags='All Artwork'>
                     <img src="./assets/1.jpg" alt="">
                 </div>
-                <div class="portfolio__item">
+                <div class="portfolio__item" data-tags='All Web Design'>
                     <img src="./assets/2.jpg" alt="">
                 </div>
-                <div class="portfolio__item">
+                <div class="portfolio__item" data-tags='All Graphic Design'>
                     <img src="./assets/3.jpg" alt="">
                 </div>
-                <div class="portfolio__item">
+                <div class="portfolio__item" data-tags='All Artwork'>
                     <img src="./assets/4.jpg" alt="">
                 </div>
-                <div class="portfolio__item">
+                <div class="portfolio__item" data-tags='All Web Design'>
                     <img src="./assets/5.jpg" alt="">
                 </div>
-                <div class="portfolio__item">
+                <div class="portfolio__item" data-tags='All Artwork'>
                     <img src="./assets/6.jpg" alt="">
                 </div>
-                <div class="portfolio__item">
+                <div class="portfolio__item" data-tags='All Artwork'>
                     <img src="./assets/7.jpg" alt="">
                 </div>
-                <div class="portfolio__item">
+                <div class="portfolio__item" data-tags='All Web Design'>
                     <img src="./assets/8.jpg" alt="">
                 </div>
-                <div class="portfolio__item">
+                <div class="portfolio__item" data-tags='All Artwork'>
                     <img src="./assets/9.jpg" alt="">
                 </div>
-                <div class="portfolio__item">
+                <div class="portfolio__item" data-tags='All Web Design'>
                     <img src="./assets/10.jpg" alt="">
                 </div>
-                <div class="portfolio__item">
+                <div class="portfolio__item" data-tags='All Graphic Design'>
                     <img src="./assets/11.jpg" alt="">
                 </div>
-                <div class="portfolio__item">
+                <div class="portfolio__item" data-tags='All Artwork'>
                     <img src="./assets/12.jpg" alt="">
                 </div>
             </div>
@@ -215,7 +228,7 @@
     <!-- PORTFOLIO END-->
 
     <!-- ABOUT-US START-->
-    <section class="about-us">
+    <section id="about-us" class="about-us">
         <div class="container">
             <div class="title">About Us</div>
             <div class="title__subtitle">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</div>
@@ -297,19 +310,19 @@
     </section>
     <!-- ABOUT-US END-->
 
-    <!--START GetQuote-->
-    <section class="get-quote">
+   <!--START GetQuote-->
+    <section id="contact" class="get-quote">
         <div class="container">
             <h2 class="title get-quote__title">Get a Quote</h2>
             <p class="title__subtitle get-quote__subtitle">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
             <div class="layout-2-column get-quote__contact">
                 <form class="form" method="POST" action="/">
-                    <input class="form__name" id="name" type="name" placeholder="Name (Requred)" required>
-                    <input class="form__email" id="email" type="email" placeholder="Email (Requred)" required>
-                    <input class="form__subject" id="subject" type="text" placeholder="Subject">
+                    <input class="form__name" id="name" type="name" placeholder="Name (Requred)" required maxlength="30">
+                    <input class="form__email" id="email" type="email" placeholder="Email (Requred)" required maxlength="20">
+                    <input class="form__subject" id="subject" type="text" placeholder="Subject" maxlength="50">
                     <label for="area"> </label>
-                    <textarea class="form__area" name="area" id="area" placeholder="Describe your project in detail..."></textarea>
-                    <input class="form__submit" type="submit" value="Submit">
+                    <textarea class="form__area" name="area" id="area" placeholder="Describe your project in detail..." maxlength="590"></textarea>
+                    <button class="form__submit" type="submit">SEND</button>
                 </form>
                 <div class="contact">
                     <h3 class="contact__title">Contact Information</h3>
@@ -352,5 +365,14 @@
         </div>
     </section>
     <!--END FOOTER-->
+    <div class="overlay overlay--hidden">
+        <div class="modal">
+            <h4>Письмо отправлено</h4>
+            <p>Тема: <span id="modal__topic"></span></p>
+            <p>Описание: <span id="modal__description"></span></p>
+            <button class="modal__btn">OK</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
 </body>
 </html>

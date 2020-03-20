@@ -19,7 +19,11 @@
     }
     &__details {
         margin-top: 20px;
+
+        &>a:not(:nth-child(1)):hover {
+            text-decoration: underline;
     }
+} 
     &__details a {
         margin-top: 0px;
     }

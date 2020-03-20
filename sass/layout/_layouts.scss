@@ -8,11 +8,15 @@
     &-3-colomn {
         display: flex;
         justify-content: space-between;
+        flex-wrap: wrap;
     }
 
     &-4-colomn {
-        display: flex;
-        flex-wrap: wrap;
+        padding: 5px;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        gap: 20px;
+        grid-auto-flow: row;
         max-height: 620px;
         overflow: hidden;
     }

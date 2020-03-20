@@ -5,9 +5,9 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "sass": "sass sass/style.scss singolo2.css --watch",
+    "sass2": "sass sass/style.scss singolo2.css --watch",
     "sass3": "sass sass/style-part3.scss singolo3.css --watch",
-    "sass-full": "sass sass/fullpage.scss style.css"
+    "sass-full": "sass sass/fullpage.scss style.css --watch"
   },
   "repository": {
     "type": "git",
