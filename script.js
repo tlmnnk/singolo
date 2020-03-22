@@ -52,11 +52,6 @@ const navMenuItemSelectedOnScroll = () => {
                 link.classList.remove('nav__item-link--active');});
             navLinks[4].classList.add('nav__item-link--active');
         }
-        if(curPos >= 2400) {
-            navLinks.forEach(link => {
-                link.classList.remove('nav__item-link--active');});
-            navLinks[4].classList.add('nav__item-link--active');
-        }
     });
 };
 
