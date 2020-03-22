@@ -27,11 +27,13 @@
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
+    overflow: hidden;
 
     >* {
         color: $color-dark-text;
         font-weight: 900;
         font-size: 2.5rem;
+        word-wrap: break-word;
 
         span {
             color: $color-dark-bg;

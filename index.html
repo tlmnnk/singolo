@@ -31,33 +31,21 @@
 
     <!-- SLIDER START -->
     <section id="home" class="slider">
-        <div class="slider__wrapper">
+        <div class="container">
             <div id="prev" class="slider__arrow slider__arrow--left">
                 <svg id='arrow' x="0px" y="0px"
-                        viewBox="0 0 492.004 492.004" style="enable-background:new 0 0 492.004 492.004;" xml:space="preserve">
-                <g>
-                    <path d="M382.678,226.804L163.73,7.86C158.666,2.792,151.906,0,144.698,0s-13.968,2.792-19.032,7.86l-16.124,16.12
-            c-10.492,10.504-10.492,27.576,0,38.064L293.398,245.9l-184.06,184.06c-5.064,5.068-7.86,11.824-7.86,19.028
-            c0,7.212,2.796,13.968,7.86,19.04l16.124,16.116c5.068,5.068,11.824,7.86,19.032,7.86s13.968-2.792,19.032-7.86L382.678,265
-            c5.076-5.084,7.864-11.872,7.848-19.088C390.542,238.668,387.754,231.884,382.678,226.804z"/>
-                    </g>
-                </svg>
-            </div>
-            <div id="next" class="slider__arrow slider__arrow--right">
-                <svg id='arrow' x="0px" y="0px"
-                        viewBox="0 0 492.004 492.004" style="enable-background:new 0 0 492.004 492.004;" xml:space="preserve">
-                <g>
-                    <path d="M382.678,226.804L163.73,7.86C158.666,2.792,151.906,0,144.698,0s-13.968,2.792-19.032,7.86l-16.124,16.12
-            c-10.492,10.504-10.492,27.576,0,38.064L293.398,245.9l-184.06,184.06c-5.064,5.068-7.86,11.824-7.86,19.028
-            c0,7.212,2.796,13.968,7.86,19.04l16.124,16.116c5.068,5.068,11.824,7.86,19.032,7.86s13.968-2.792,19.032-7.86L382.678,265
-            c5.076-5.084,7.864-11.872,7.848-19.088C390.542,238.668,387.754,231.884,382.678,226.804z"/>
-                    </g>
+	                    viewBox="0 0 492.004 492.004" style="enable-background:new 0 0 492.004 492.004;" xml:space="preserve">
+	            <g>
+		            <path d="M382.678,226.804L163.73,7.86C158.666,2.792,151.906,0,144.698,0s-13.968,2.792-19.032,7.86l-16.124,16.12
+			c-10.492,10.504-10.492,27.576,0,38.064L293.398,245.9l-184.06,184.06c-5.064,5.068-7.86,11.824-7.86,19.028
+			c0,7.212,2.796,13.968,7.86,19.04l16.124,16.116c5.068,5.068,11.824,7.86,19.032,7.86s13.968-2.792,19.032-7.86L382.678,265
+			c5.076-5.084,7.864-11.872,7.848-19.088C390.542,238.668,387.754,231.884,382.678,226.804z"/>
+	                </g>
                 </svg>
             </div>
             <div class="slider__block">
-                
-                <div class="slide">
-                    <div class="slider__item container">
+                <div class="slide slide-active">
+                    <div class="slider__item">
                         <div class="slider__item-vertical">                 
                             <img
                                 class="slider__item-img"
@@ -85,18 +73,25 @@
                         </div>
                     </div>
                 </div>     
-                
-
-                <!--<div class="slide slide-2">
-                    <div class="slider__item container">
+                <div class="slide">
+                    <div class="slider__item">
                         <img src="assets/slide2.png" alt="slide-2">
                     </div>
-                </div> -->
+                </div>
+            </div>
+            
+            <div id="next" class="slider__arrow slider__arrow--right">
+                <svg id='arrow' x="0px" y="0px"
+	                    viewBox="0 0 492.004 492.004" style="enable-background:new 0 0 492.004 492.004;" xml:space="preserve">
+	            <g>
+		            <path d="M382.678,226.804L163.73,7.86C158.666,2.792,151.906,0,144.698,0s-13.968,2.792-19.032,7.86l-16.124,16.12
+			c-10.492,10.504-10.492,27.576,0,38.064L293.398,245.9l-184.06,184.06c-5.064,5.068-7.86,11.824-7.86,19.028
+			c0,7.212,2.796,13.968,7.86,19.04l16.124,16.116c5.068,5.068,11.824,7.86,19.032,7.86s13.968-2.792,19.032-7.86L382.678,265
+			c5.076-5.084,7.864-11.872,7.848-19.088C390.542,238.668,387.754,231.884,382.678,226.804z"/>
+	                </g>
+                </svg>
             </div>
         </div>
-            
-            
-        
     </section>
     <!-- SLIDER END -->
 
@@ -322,9 +317,9 @@
             <p class="title__subtitle get-quote__subtitle">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
             <div class="layout-2-column get-quote__contact">
                 <form class="form" method="POST" action="/">
-                    <input class="form__name" id="name" type="name" placeholder="Name (Requred)" required>
-                    <input class="form__email" id="email" type="email" placeholder="Email (Requred)" required>
-                    <input class="form__subject" id="subject" type="text" placeholder="Subject">
+                    <input class="form__name" id="name" type="name" placeholder="Name (Requred)" required maxlength="30">
+                    <input class="form__email" id="email" type="email" placeholder="Email (Requred)" required maxlength="20">
+                    <input class="form__subject" id="subject" type="text" placeholder="Subject" maxlength="50">
                     <label for="area"> </label>
                     <textarea class="form__area" name="area" id="area" placeholder="Describe your project in detail..." maxlength="590"></textarea>
                     <button class="form__submit" type="submit">SEND</button>

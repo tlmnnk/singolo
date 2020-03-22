@@ -61,39 +61,86 @@ const navMenuItemSelectedOnScroll = () => {
 };
 
 const sliderArrowClickHandler = () => {
-    const slider = document.getElementById('home');
+    //Имплементация слайдера из урока RSSchool
+    const slider = document.querySelector('.slider');
+    let isEnabled = true;
     const prev = document.getElementById('prev');
     const next = document.getElementById('next');
     const slides = document.querySelectorAll('.slide');
     const totalSlides = slides.length;
-    let index = 0;
+    let slideIndex = 0;
+
+    function changeCurrentItem(n) {
+        slideIndex = (n + totalSlides) % totalSlides;
+    }
+     
+    function hideSlide(direction) {
+        isEnabled = false;
+        slides[slideIndex].classList.add(direction);
+        console.log(direction);
+        slides[slideIndex].addEventListener('animationend', function() {
+            console.log(this);
+            this.classList.remove('slide-active', direction);
+            console.log(this);
+        });
+    }
+
+    function showSlide(direction) {
+        slides[slideIndex].classList.add('slide-next', direction);
+        slides[slideIndex].addEventListener('animationend', function() {
+            this.classList.remove('slide-next', direction);
+            this.classList.add('slide-active');
+            isEnabled = true;
+        });
+    }
+
+    function prevSlideIndex(n) {
+        hideSlide('slide-to-right');
+        changeCurrentItem(n - 1);
+        switchSliderBackground(slider);
+        showSlide('slide-from-left');
+    }
+
+    function nextSlideIndex(n) {
+        hideSlide('slide-to-left');
+        changeCurrentItem(n + 1);
+        switchSliderBackground(slider);
+        showSlide('slide-from-right');
+    }
+
+    function prevSlide()  {
+        if(isEnabled) {
+            prevSlideIndex(slideIndex);
+        }
+    } 
+    
+    function nextSlide()  {
+        if(isEnabled) {
+            nextSlideIndex(slideIndex);
+        }
+    }    
+     
 
     prev.addEventListener('click', prevSlide);
     next.addEventListener('click', nextSlide);
+};
 
-    function nextSlide() {
-        let sliderStyles = window.getComputedStyle(slider);
-        //sliderStyles.backgroundColor === 'rgb(240, 108, 100)' ? slider.style.backgroundColor = 'rgb(100, 139, 240)' : slider.style.backgroundColor = 'rgb(240, 108, 100)';
-        index++;
-        if(index === totalSlides) {index = 0;}
-    
-        for(let i = 0; i < totalSlides; i++) {
-            slides[i].classList.remove('slide--active');
-        }
-        slides[index].classList.add('slide--active'); 
+const switchSliderBackground = (slider) => {
+    let sliderStyles = window.getComputedStyle(slider);
+    if(sliderStyles.backgroundColor === 'rgb(240, 108, 100)') {
+        slider.style.backgroundColor = 'rgb(100, 139, 240)';
+        slider.style.borderColor = 'rgb(100, 139, 240)';
+    } else {
+        slider.style.backgroundColor = 'rgb(240, 108, 100)';
+        slider.style.borderColor = 'rgb(240, 108, 100)';
     }
-    
-    function prevSlide() {
-        let sliderStyles = window.getComputedStyle(slider);
-        //sliderStyles.backgroundColor === 'rgb(240, 108, 100)' ? slider.style.backgroundColor = 'rgb(100, 139, 240)' : slider.style.backgroundColor = 'rgb(240, 108, 100)';
-    
-        if(index === 0) {index = totalSlides;}
-        index--;
-        for(let i = 0; i < totalSlides; i++) {
-            slides[i].classList.remove('slide--active');
-        }
-        slides[index].classList.add('slide--active');
-    }
+    //sliderStyles.backgroundColor === 'rgb(240, 108, 100)' ? slider.style.backgroundColor = 'rgb(100, 139, 240)' : slider.style.backgroundColor = 'rgb(240, 108, 100)';
+        
+};
+
+const smoothClassChange = (element, classToAdd) => {
+    element.classList.add(classToAdd);
+    setTimeout(() => element.classList.remove(classToAdd), 300);
 };
 
 const iphoneClickHandler = () => {
