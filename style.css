@@ -453,6 +453,22 @@ h3 {
   flex-wrap: wrap;
   justify-content: space-between;
 }
+@media (max-width: 1020px) {
+  .services__block {
+    justify-content: space-around;
+  }
+  .services__block > * {
+    flex-basis: 45%;
+  }
+}
+@media (max-width: 768px) {
+  .services__block {
+    justify-content: center;
+  }
+  .services__block > * {
+    flex-basis: 90%;
+  }
+}
 
 .services__item {
   margin-bottom: 30px;
@@ -463,9 +479,20 @@ h3 {
   justify-content: space-between;
   overflow: hidden;
 }
+@media (max-width: 768px) {
+  .services__item {
+    justify-content: center;
+    max-width: 100%;
+  }
+}
 
 .services__item-icon {
   margin-top: 6px;
+}
+@media (max-width: 768px) {
+  .services__item-icon {
+    margin-right: 20px;
+  }
 }
 
 .services__item-circle {

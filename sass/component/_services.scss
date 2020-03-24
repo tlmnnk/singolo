@@ -33,6 +33,20 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+
+    @include media-body {
+        justify-content: space-around;
+        &>* {
+            flex-basis: 45%;
+        }
+    }
+
+    @include media-tablet {
+        justify-content: center;
+        &>* {
+            flex-basis: 90%;
+        }
+    }
 }
 
 .services__item {
@@ -43,10 +57,19 @@
     display: flex;
     justify-content: space-between;
     overflow: hidden;
+
+    @include media-tablet {
+        justify-content: center;
+        max-width: 100%;
+    }
 }
 
 .services__item-icon {
     margin-top: 6px;
+
+    @include media-tablet {
+        margin-right: 20px;
+    }
 }
 
 .services__item-circle {
