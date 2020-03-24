@@ -1,0 +1,45 @@
+%hamburger-line {
+    position: absolute;
+    display: inline-block;
+    background: rgb(235, 236, 238);
+    border-radius: 5px;
+    height: 3px;
+    width: 100%;
+}
+
+.header__logo-line {
+    display: none;
+
+    @include media-mobile {
+        display: block;
+    }
+}
+
+.hamburger {
+    display: none;
+    position: relative;
+    width: 31px;
+    height: 25px;
+    cursor: pointer;
+
+    @include media-tablet {
+        display: inline-block;
+    };
+
+    &:before {
+        content: '';
+        @extend %hamburger-line;
+        top: 0;
+    }
+
+    &:after {
+        content: '';
+        @extend %hamburger-line;
+        bottom: 0;
+    }
+
+    &__line {
+        @extend %hamburger-line;
+        top: calc( 50% - 1.5px);
+    }
+}

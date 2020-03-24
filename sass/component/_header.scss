@@ -9,6 +9,10 @@
     &--shadow {
         box-shadow: 0 4px 30px -5px rgba(#000, 0.2);
     }
+
+    @include media-tablet {
+        padding: 0 10px;
+    }
 }
 
 .header__logo {
