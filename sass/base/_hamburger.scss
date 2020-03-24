@@ -10,7 +10,7 @@
 .header__logo-line {
     display: none;
 
-    @include media-mobile {
+    @include media-tablet {
         display: block;
     }
 }

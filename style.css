@@ -76,7 +76,7 @@ h3 {
 .header__logo-line {
   display: none;
 }
-@media (max-width: 414px) {
+@media (max-width: 768px) {
   .header__logo-line {
     display: block;
   }
@@ -163,6 +163,7 @@ h3 {
   justify-content: space-between;
   align-items: center;
   transition: all 0.4s;
+  position: relative;
 }
 .header__block--resize {
   padding: 0 0 2px;
@@ -177,6 +178,11 @@ h3 {
   color: #fff;
   list-style: none;
   text-transform: uppercase;
+}
+@media (max-width: 768px) {
+  .nav__block {
+    display: none;
+  }
 }
 
 .nav__item {
