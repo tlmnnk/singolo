@@ -14,5 +14,9 @@
 
     &__contact {
         margin-top: 45px;
+
+        @include media-tablet {
+            display: initial;
+        }
     }
 }

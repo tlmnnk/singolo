@@ -783,6 +783,11 @@ h3 {
 .get-quote__contact {
   margin-top: 45px;
 }
+@media (max-width: 768px) {
+  .get-quote__contact {
+    display: initial;
+  }
+}
 
 .form {
   max-width: 620px;
@@ -791,6 +796,12 @@ h3 {
   color: #f48c8f;
   font-weight: 400;
   flex-grow: 1;
+}
+@media (max-width: 768px) {
+  .form {
+    margin-top: 20px;
+    max-width: 100%;
+  }
 }
 .form > input, .form textarea {
   margin-top: 16px;
@@ -844,12 +855,29 @@ h3 {
   transition: all 0.3s;
   cursor: pointer;
 }
+@media (max-width: 768px) {
+  .form__submit {
+    width: 100%;
+  }
+}
 .form__submit:hover {
   background-color: #ffefa8;
 }
 
 .contact {
   max-width: 300px;
+}
+@media (max-width: 1020px) {
+  .contact {
+    margin-left: 30px;
+  }
+}
+@media (max-width: 768px) {
+  .contact {
+    margin-top: 32px;
+    max-width: 100%;
+    margin-left: 0;
+  }
 }
 .contact__title {
   color: #f0d8d9;
@@ -894,8 +922,18 @@ h3 {
   font-weight: 400;
   color: #666d89;
 }
+@media (max-width: 768px) {
+  .footer__copyright {
+    display: none;
+  }
+}
 .footer__socials {
   margin-right: -5px;
+}
+@media (max-width: 768px) {
+  .footer__socials {
+    margin: 0 auto;
+  }
 }
 
 .overlay {

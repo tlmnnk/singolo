@@ -7,9 +7,17 @@
         line-height: 3rem;
         font-weight: 400;
         color: $color-dark-title;
+
+        @include media-tablet {
+            display: none;
+        }
     }
 
     &__socials {
        margin-right: -5px;
+
+       @include media-tablet {
+           margin: 0 auto;
+       }
     }
 }

@@ -1,6 +1,15 @@
 .contact {
     max-width: 300px;
 
+    @include media-body {
+        margin-left: 30px;
+    }
+    @include media-tablet {
+        margin-top: 32px;
+        max-width: 100%;
+        margin-left: 0;
+    }
+
     &__title {
         color: $color-light-text;
     }
