@@ -6,6 +6,17 @@
     border-bottom: solid 6px #ea676b;
     transition: all .2s ease-out;
 
+    @include media-body {
+        padding-top: 0px;
+        height: 564px;
+        padding-bottom: 10px;
+    }
+
+    @include media-tablet {
+        padding-top: 57px;
+        height: 335px;
+    }
+
     > .container {
         height: 115%;
         display: flex;
@@ -31,6 +42,26 @@
     align-items: center;
     max-height: 458px;
     user-select: none;
+
+    @include media-body {
+        justify-content: space-around;
+    }
+
+    @include media-tablet {
+        justify-content: center;
+    }
+}
+
+.slider__item-2 {
+    width: 56.9%;
+    margin: 0 auto;
+
+    @include media-body {
+        width: 45.9%;
+    }
+    @include media-tablet {
+        width: 200px;
+    }
 }
 
 .slider__item-img {
@@ -38,24 +69,78 @@
     z-index: 3;
     
     cursor: pointer;
+
+    @include media-body {
+        width: 162.64px
+    }
+
+    @include media-tablet {
+        width: 88px;
+        height: 190px;
+    }
+    @include media-slidersmall {
+        width: 73px;
+        height: 127px;
+    }
 }
 
 .slider__item-vertical {
     margin-left: 58px;
     position: relative;
     z-index: 2;
+
+    @include media-body {
+        margin-left: 0;
+    }
+    @include media-tablet {
+        margin-left: 45px;
+    }
+
+    @include media-slidersmall {
+        margin-left: 87px;
+    }
 }
 .slider__item-shadow {
     display: block;
     position: absolute;
     top: 0;
     z-index: -2;
+
+    @include media-body {
+        width: 182px;
+    }
+    @include media-tablet {
+        width: 100px;
+    }
+    @include media-slidersmall {
+        width: 81px;
+        height: 140px;
+    }
+}
+
+.slider__item-shadow--v {
+    @include media-body {
+        width: 182px;
+    }
+    @include media-body {
+        width: 88px;
+    }
+
 }
 
 .slider__item-shadow--h {
     transform: scaleY(-1) rotate(90deg);
     filter: FlipV;
 
+    @include media-body {
+        width: 182px;
+    }
+    @include media-tablet {
+        width: 100px;
+    }
+    @include media-slidersmall {
+        width: 83px;
+    }
 }
 
 .slider__item-wallpaper {  
@@ -82,7 +167,26 @@
     top: 64px;
     left: 12px;
     background-image: url(assets/iphone-wallpaper1.jpg);
-    background-position: top -133px left -12px
+    background-position: top -133px left -12px;
+
+    @include media-body {
+        width: 146px;
+        height: 271px;
+        top: 42px;
+        left: 7px;
+    }
+
+    @include media-tablet {
+        width: 83px;
+        height: 158px;
+        top: 16px;
+        left: 3px;
+    }
+
+    @include media-slidersmall {
+        width: 65px;
+        height: 107px;
+    }
 }
 
 .slider__item-wallpaper--h {
@@ -94,7 +198,25 @@
     left: -61px;
     background-image: url(assets/iphone-wallpaper2.jpg);
     background-position: top -116px left -125px;
-    
+
+    @include media-body {
+        width: 300px;
+        height: 147px;
+        top: 98px;
+        left: -70px;
+    }
+    @include media-tablet {
+        width: 161px;
+        height: 83px;
+        top: 54px;
+        left: -40px;
+    }
+    @include media-slidersmall {
+        width: 106px;
+        height: 68px;
+        top: 30px;
+        left: -17px;
+    }
 }
 
 .slider__item-wallpaper__img {
@@ -106,6 +228,20 @@
     margin-right: 202px;
     position: relative;
     z-index: 2;
+
+    @include media-body {
+        margin-left: 73px;
+        margin-right: 95px;
+        width: initial;
+    }
+
+    @include media-tablet {
+        margin-right: 104px;
+    }
+    @include media-slidersmall {
+        margin-right: 124px;
+        margin-left: 43px;
+    }
 }
 
 .slider__item-img--horizontal {
@@ -156,11 +292,6 @@
     display: block;  
 }
 
-.slider__item img {
-    display: block;
-    margin: 0 auto;
-    object-fit: contain;
-}
 
 .slide-hide {
     visibility: hidden;

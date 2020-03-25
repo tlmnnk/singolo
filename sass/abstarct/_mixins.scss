@@ -15,5 +15,9 @@
 }
 
 @mixin media-mobilesmall {
-    @media (max-width: $mobile-small-width) { @content }
+    @media (max-width: $mobile-small-width) { @content; }
+}
+
+@mixin media-slidersmall {
+    @media (max-width: 406px) { @content; }
 }
