@@ -1,7 +1,20 @@
 .employee {
 
+    @include media-tablet {
+        margin-top: 34px;
+        &:first-child {
+            margin-top: 0;
+        }
+    }
+
     &__content {
         width: 300px;
+
+        @include media-body {
+            width: 100%;
+        }
+
+        
     }
 
     &__name {
@@ -12,6 +25,11 @@
 
     &__photo {
         height: 300px;
+
+        @include media-body {
+            height: auto;
+            width: 100%;
+        }
 
         &:hover {
             opacity: .8;

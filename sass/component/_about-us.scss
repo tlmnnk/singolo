@@ -9,5 +9,16 @@
 
     &__layout {
         margin-top: 45px;
+
+        @include media-body {
+            &>* {
+                flex-basis: 32%;
+            }
+        }
+        @include media-tablet {
+            &>* {
+                flex-basis: 100%;
+            }
+        }   
     }
 }

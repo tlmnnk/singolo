@@ -624,6 +624,16 @@ h3 {
 .about-us__layout {
   margin-top: 45px;
 }
+@media (max-width: 1020px) {
+  .about-us__layout > * {
+    flex-basis: 32%;
+  }
+}
+@media (max-width: 768px) {
+  .about-us__layout > * {
+    flex-basis: 100%;
+  }
+}
 
 .title {
   font-size: 3rem;
@@ -666,8 +676,21 @@ h3 {
   border-color: #f2f2f2;
 }
 
+@media (max-width: 768px) {
+  .employee {
+    margin-top: 34px;
+  }
+  .employee:first-child {
+    margin-top: 0;
+  }
+}
 .employee__content {
   width: 300px;
+}
+@media (max-width: 1020px) {
+  .employee__content {
+    width: 100%;
+  }
 }
 .employee__name {
   margin-top: 15px;
@@ -676,6 +699,12 @@ h3 {
 }
 .employee__photo {
   height: 300px;
+}
+@media (max-width: 1020px) {
+  .employee__photo {
+    height: auto;
+    width: 100%;
+  }
 }
 .employee__photo:hover {
   opacity: 0.8;
