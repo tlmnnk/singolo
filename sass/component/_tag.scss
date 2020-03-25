@@ -10,6 +10,11 @@
     cursor: pointer;
     transition: all .2s ease-out;
 
+    @include media-mobile {
+        margin-right: 2px;
+        padding: 3px 4px;
+    }
+
     &--selected {
         color: $color-light-bg;
         border-color: $color-light-bg;

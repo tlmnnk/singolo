@@ -11,11 +11,44 @@
 
     &__layout {
         padding: 10px;
+        max-height: 620px;
+
+        @include media-body {
+            justify-content: center;
+            grid-template-rows: repeat(4, 183px);
+            grid-template-columns: repeat(3, 216px);
+            max-height: calc(203px * 4);
+            
+        }
+
+        @include media-tablet {
+            grid-template-rows: repeat(4, 130px);
+            grid-template-columns: repeat(2, 152px);
+            gap: 10px;
+            max-height: calc(140px * 4);
+        }
+
+        @include media-mobile {
+            grid-template-rows: repeat(4, 112px);
+            grid-template-columns: repeat(2, 123px);
+            gap: 10px;
+            max-height: calc(153px * 4);
+        }
     }
   
     &__item {
         max-width: 220px;
         height: 187px;
+
+        @include media-tablet {
+            width: 151px;
+            height: 128px;
+        }
+
+         @include media-mobile {
+            width: 122px;
+            height: 112px;
+        } 
 
         &--border {
             outline: 5px solid #F06C64;

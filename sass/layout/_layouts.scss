@@ -14,10 +14,16 @@
     &-4-colomn {
         padding: 5px;
         display: grid;
-        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: repeat(3, 187px);
+        grid-template-columns: repeat(4, 220px);
+        -webkit-box-pack: justify;
+        -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
+        justify-content: space-between;
+        max-height: calc(207px * 3);
+        padding: 0;
+        margin: 0;
         gap: 20px;
-        grid-auto-flow: row;
-        max-height: 620px;
         overflow: hidden;
     }
 }
