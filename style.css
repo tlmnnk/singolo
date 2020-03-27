@@ -86,9 +86,13 @@ h3 {
 .hamburger {
   display: none;
   position: relative;
-  width: 31px;
-  height: 25px;
+  width: 25px;
+  height: 20px;
   cursor: pointer;
+  transition: all 0.4s;
+}
+.hamburger--click {
+  transform: rotate(90deg);
 }
 @media (max-width: 768px) {
   .hamburger {
@@ -152,6 +156,15 @@ h3 {
 .header__logo {
   margin-top: 3px;
 }
+@media (max-width: 768px) {
+  .header__logo {
+    margin: auto;
+  }
+}
+.header__logo--active {
+  margin-right: auto;
+  margin-left: 20px;
+}
 
 .header__logo-link {
   font-size: 2.4rem;
@@ -172,6 +185,9 @@ h3 {
   transition: all 0.4s;
   position: relative;
 }
+.header__block--active {
+  justify-items: normal;
+}
 @media (max-width: 768px) {
   .header__block {
     padding: 16px 0 10px;
@@ -179,6 +195,28 @@ h3 {
 }
 .header__block--resize {
   padding: 0 0 2px;
+}
+
+@media (max-width: 768px) {
+  nav {
+    position: absolute;
+    top: 58px;
+    left: -100vw;
+    z-index: 99;
+    width: 65vw;
+    height: 100vh;
+    background-color: #2d303a;
+    -webkit-transition: left 0.3s linear;
+    transition: left 0.3s linear;
+  }
+}
+
+.nav--active {
+  left: -40px;
+}
+
+.nav--onheader-resize {
+  top: 36px;
 }
 
 .nav__block {
@@ -193,7 +231,14 @@ h3 {
 }
 @media (max-width: 768px) {
   .nav__block {
-    display: none;
+    margin-top: 20vh;
+    flex-direction: column;
+  }
+  .nav__block > * {
+    padding: 1.441vh 0 1.441vh 20vw;
+    font-size: 24px;
+    line-height: 29px;
+    letter-spacing: -0.035em;
   }
 }
 
@@ -201,6 +246,12 @@ h3 {
   margin-left: 30px;
   position: relative;
   font-weight: 400;
+}
+@media (max-width: 768px) {
+  .nav__item {
+    margin-left: 0;
+    align-self: start;
+  }
 }
 
 .nav .nav__block:first-child {
@@ -225,6 +276,11 @@ h3 {
   position: absolute;
   top: 50%;
   right: -16px;
+}
+@media (max-width: 768px) {
+  .nav__item:before {
+    display: none;
+  }
 }
 
 .nav__item:last-child::before {
@@ -1142,6 +1198,9 @@ h3 {
   align-items: center;
   overflow: hidden;
   border: 3px solid #fbc65f;
+}
+.modal--hidden {
+  display: none;
 }
 .modal > * {
   color: #767e9e;

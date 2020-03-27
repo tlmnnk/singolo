@@ -1,6 +1,9 @@
 window.onload = function() {
     //DOMContentLoaded - when dom loaded
     //window.onload - when all loaded including styles
+    navMenuHandler();
+
+    burgerClickHandler();
   
     headerOnScrollResize();
 
@@ -16,10 +19,47 @@ window.onload = function() {
    
 };
 
+const burgerClickHandler = () => {
+    document.querySelector('.hamburger').addEventListener('click', () => {
+        // toggle show/hide class for navigation
+    burgerClassToggle();
+    overlayToggle();
+    document.querySelector('.nav').addEventListener('click', (e) => {
+        if(e.target.classList.contains('nav__item-link')) {
+            console.log('nav__item-link click!...');
+            burgerClassToggle();
+            document.querySelector('.hamburger').classList.remove('hamburger--click');
+            document.querySelector('.nav').classList.remove('nav--active');
+        }
+    });
+});
+};
+
+const burgerClassToggle = () => {
+    document.querySelector('.nav').classList.toggle('nav--active');
+    document.querySelector('.header__block').classList.toggle('header__block--active');
+    document.querySelector('.header__logo').classList.toggle('header__logo--active');
+    document.querySelector('.hamburger').classList.toggle('hamburger--click');
+
+};
+
+const overlayToggle = () => {
+    console.log('overlayToggle run');
+    document.querySelector('.modal').classList.toggle('modal--hidden');
+    document.querySelector('.overlay').classList.toggle('overlay--hidden');
+};
+
 const headerOnScrollResize = () => {
     const header = document.querySelector('.header__block');
     window.addEventListener('scroll', () => {
-        window.scrollY > 70 ? header.classList.add('header__block--resize') : header.classList.remove('header__block--resize');
+        if(window.scrollY > 70) {
+            header.classList.add('header__block--resize');
+            document.querySelector('.nav').classList.add('nav--onheader-resize');
+        } else {
+            header.classList.remove('header__block--resize');
+            document.querySelector('.nav').classList.remove('nav--onheader-resize');
+        }
+             
         navMenuItemSelectedOnScroll();
 	});
 };
@@ -30,6 +70,9 @@ const navMenuHandler = () => {
     navMenu.addEventListener('click', (event) => {
         document.querySelectorAll('.nav__item-link').forEach(item => item.classList.remove('nav__item-link--active'));
         event.target.classList.add('nav__item-link--active');
+        if(!document.querySelector('.overlay').classList.contains('overlay--hidden')) {
+            overlayToggle();
+        }
     });
 };
 

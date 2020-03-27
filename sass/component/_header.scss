@@ -17,6 +17,15 @@
 
 .header__logo {
     margin-top: 3px;
+
+    @include media-tablet {
+        margin: auto;
+    }
+
+    &--active {
+        margin-right: auto;
+        margin-left: 20px;
+    }
 }
 
 .header__logo-link {
@@ -37,6 +46,10 @@
     align-items: center;
     transition: all 0.4s;
     position: relative;
+
+    &--active {
+        justify-items: normal;
+    }
 
     @include media-tablet {
         padding: 16px 0 10px;

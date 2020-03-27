@@ -30,6 +30,10 @@
     overflow: hidden;
     border: 3px solid rgb(251,198,95);
 
+    &--hidden {
+        display: none;
+    }
+
     >* {
         color: $color-dark-text;
         font-weight: 900;
