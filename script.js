@@ -30,6 +30,7 @@ const burgerClickHandler = () => {
             burgerClassToggle();
             document.querySelector('.hamburger').classList.remove('hamburger--click');
             document.querySelector('.nav').classList.remove('nav--active');
+            document.querySelector('.header__logo').classList.remove('header__logo--active');
         }
     });
 });
