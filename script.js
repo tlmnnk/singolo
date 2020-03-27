@@ -268,6 +268,8 @@ const modalOnSubmitShow = (e) => {
     const topic = document.getElementById('subject').value ? document.getElementById('subject').value : 'Без темы';
     const description = document.getElementById('area').value ? document.getElementById('area').value : 'Без описания';
    
+    // Hide hamburger
+    document.querySelector('.hamburger').style.visibility = 'hidden';
     renderModal(topic, description);
 
     closeModal();
@@ -282,8 +284,10 @@ const renderModal = (topic, description) => {
 
 const closeModal = () => {
     document.querySelector('.modal__btn').addEventListener('click', () => {
+        document.querySelector('.hamburger').style.visibility = 'visible';
         document.querySelector('.overlay').classList.add('overlay--hidden');
         document.querySelector('body').classList.remove('scroll-hidden');
+        
     });
     resetInputValues();
 };
