@@ -26,7 +26,6 @@ const burgerClickHandler = () => {
     overlayToggle();
     document.querySelector('.nav').addEventListener('click', (e) => {
         if(e.target.classList.contains('nav__item-link')) {
-            console.log('nav__item-link click!...');
             burgerClassToggle();
             document.querySelector('.hamburger').classList.remove('hamburger--click');
             document.querySelector('.nav').classList.remove('nav--active');
@@ -45,7 +44,6 @@ const burgerClassToggle = () => {
 };
 
 const overlayToggle = () => {
-    console.log('overlayToggle run');
     document.querySelector('.modal').classList.toggle('modal--hidden');
     document.querySelector('.overlay').classList.toggle('overlay--hidden');
 };
@@ -91,7 +89,7 @@ const navMenuItemSelectedOnScroll = () => {
             });
             document.querySelectorAll('.nav__item-link');
         }
-        if(curPos >= 2400) {
+        if((curPos >= 2400 && window.innerWidth > 768) || (curPos >= 4800 && window.innerWidth <= 768)) {
             navLinks.forEach(link => {
                 link.classList.remove('nav__item-link--active');});
             navLinks[4].classList.add('nav__item-link--active');

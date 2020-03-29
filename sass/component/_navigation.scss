@@ -2,7 +2,7 @@
 nav {
     @include media-tablet {
         position: absolute;
-        top: 58px;
+        top: 57px;
         left: -100vw;
         z-index: 99;
         width: 65vw;
@@ -18,7 +18,7 @@ nav {
 }
 
 .nav--onheader-resize {
-    top: 36px;
+    top: 33px;
 }
 
 .nav__block {

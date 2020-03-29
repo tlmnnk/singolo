@@ -2,7 +2,7 @@
 
 ***
 ***
-# ***[https://tlmnnk.github.io/singolo/](http://example.com/)***
+# ***[https://tlmnnk.github.io/singolo/](https://tlmnnk.github.io/singolo/)***
 ***
 ***
 # Памятка проверяющим cross-check Singolo DOM & Responsive

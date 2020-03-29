@@ -22,14 +22,14 @@
         }
 
         @include media-tablet {
-            grid-template-rows: repeat(4, 130px);
+            grid-template-rows: repeat(4, 129px);
             grid-template-columns: repeat(2, 152px);
             gap: 10px;
             max-height: calc(140px * 4);
         }
 
         @include media-mobile {
-            grid-template-rows: repeat(4, 112px);
+            grid-template-rows: repeat(4, 111px);
             grid-template-columns: repeat(2, 123px);
             gap: 10px;
             max-height: calc(153px * 4);

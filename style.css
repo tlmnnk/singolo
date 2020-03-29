@@ -124,7 +124,7 @@ h3 {
   padding: 5px;
   display: grid;
   grid-template-rows: repeat(3, 187px);
-  grid-template-columns: repeat(4, 220px);
+  grid-template-columns: repeat(4, 216px);
   -webkit-box-pack: justify;
   -webkit-justify-content: space-between;
   -ms-flex-pack: justify;
@@ -200,7 +200,7 @@ h3 {
 @media (max-width: 768px) {
   nav {
     position: absolute;
-    top: 58px;
+    top: 57px;
     left: -100vw;
     z-index: 99;
     width: 65vw;
@@ -216,7 +216,7 @@ h3 {
 }
 
 .nav--onheader-resize {
-  top: 36px;
+  top: 33px;
 }
 
 .nav__block {
@@ -787,7 +787,7 @@ h3 {
 }
 @media (max-width: 768px) {
   .portfolio__layout {
-    grid-template-rows: repeat(4, 130px);
+    grid-template-rows: repeat(4, 129px);
     grid-template-columns: repeat(2, 152px);
     gap: 10px;
     max-height: calc(140px * 4);
@@ -795,7 +795,7 @@ h3 {
 }
 @media (max-width: 375px) {
   .portfolio__layout {
-    grid-template-rows: repeat(4, 112px);
+    grid-template-rows: repeat(4, 111px);
     grid-template-columns: repeat(2, 123px);
     gap: 10px;
     max-height: calc(153px * 4);
@@ -895,7 +895,7 @@ h3 {
 }
 @media (max-width: 375px) {
   .tag {
-    margin-right: 2px;
+    margin-right: 1px;
     padding: 3px 4px;
   }
 }
